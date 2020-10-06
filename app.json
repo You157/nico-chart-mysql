@@ -1,0 +1,7 @@
+{
+  "name": "nico-chart",
+  "description": "ニコチャート",
+  "logo": "",
+  "keywords": ["node"],
+  "image": "heroku/nodejs"
+}
