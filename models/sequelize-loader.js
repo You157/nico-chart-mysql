@@ -3,7 +3,7 @@
 
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(
-  'postgres://postgres:postgres@localhost/nico_chart',
+  process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost/nico_chart',
   {
     operatorsAliases: false
   });
