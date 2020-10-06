@@ -1,0 +1,120 @@
+extends layout
+
+block content
+  h1= title
+  p ニコチャートへようこそ！
+  canvas(id="myChart")
+  div
+    select(name="params", id="params" value="0")
+      option(value="0") 全期間
+      option(value="1") 年間
+      option(value="2") 月間
+      // option(value="3") 24時間
+  div: input(type="text" id="year" placeholder="年" value="" disabled)
+  div: input(type="text" id="month" placeholder="月" value="" disabled)
+  div: input(type="text" id="day" placeholder="日" value="" disabled)
+  button(type="button" id="btn") 表示
+
+  script.
+    let url = `/drawchart?p=0&y=&m=&d=`;
+    let labels; let videos; let views; let comments;
+    let chart;
+    $.getJSON(url, (res) => {
+      labels = res.labels;
+      videos = res.videos;
+      views = res.views;
+      comments = res.comments;
+      var myData = {
+        labels: labels,
+        datasets: [{
+          label: '動画数',
+          data: videos,
+          borderColor: "rgba(255,0,0,1)",
+          backgroundColor: "rgba(0,0,0,0)",
+          yAxisID: "y-axis-1",
+        }, {
+          label: '再生数',
+          data: views,
+          borderColor: "rgb(0,0,255)",
+          backgroundColor: "rgba(0,0,0,0)",
+          yAxisID: 'y-axis-2',
+        }, {
+          label: 'コメント数',
+          data: comments,
+          borderColor: "rgb(255,255,0)",
+          backgroundColor: "rgba(0,0,0,0)",
+          yAxisID: 'y-axis-3'
+        }]
+      }
+      var options = {
+        title: '',
+        scales: {
+          yAxes: [{
+            id: "y-axis-1",
+            position: "left",
+          }, {
+            id: "y-axis-2",
+            position: "right",
+          }, {
+            id: "y-axis-3",
+          }]
+        }
+      };
+      var canvas = $('#myChart'); 
+      chart = new Chart(canvas, {
+        type: 'line',
+        data: myData,
+        options: options
+      });
+    });    
+    let p = $("#params").val();
+    let y = $("#year");
+    let m = $("#month");
+    let d = $("#day");
+    // 入力ボックスの設定
+    $("#params").on("change",()=>{
+      p = $("#params").val();
+      y = $("#year");
+      m = $("#month");
+      d = $("#day");
+      switch(p){
+        case "0":
+          y.prop("disabled", true);
+          m.prop("disabled", true);
+          d.prop("disabled", true);
+          y.val(""); m.val(""); d.val("");
+          break;
+        case "1":
+          y.prop("disabled", false);
+          m.prop("disabled", true);
+          d.prop("disabled", true);
+          m.val(""); d.val("");
+          break;
+        case "2":
+          y.prop("disabled", false);
+          m.prop("disabled", false);
+          d.prop("disabled", true);
+          d.val("");
+          break;
+        case "3":
+          y.prop("disabled", false);
+          m.prop("disabled", false);
+          d.prop("disabled", false);
+          break;
+      }
+    });
+    $("#btn").click(()=>{
+      url = `/drawchart?p=${p}&y=${y.val()}&m=${m.val()}&d=${d.val()}`;
+      $.getJSON(url, (res) => {
+        labels = res.labels;
+        videos = res.videos;
+        views = res.views;
+        comments = res.comments;
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = videos;
+        chart.data.datasets[1].data = views;
+        chart.data.datasets[2].data = comments;
+        chart.update();
+      });
+    });
+    
