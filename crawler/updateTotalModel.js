@@ -24,9 +24,10 @@ const updateTotalModel = () => {
           total_views: data.totalViews,
           total_comments: data.totalComments,
         });
+        console.log(`totalDB: ない値なので更新: ${Object.entries(data)}`);
         logger.info(`totalDB: ない値なので更新: ${Object.entries(data)}`);
-      }).catch(() => {
-        pass;
+      }).catch((err) => {
+        console.log(err);
       });
     }).on('end', () => {
       resolve();

@@ -33,6 +33,7 @@ const updateDiffModel = async () => {
         today = moment(today).add(1, 'd').format('YYYY-MM-DD');
       });
     } catch (err) {
+      console.log(err);
       logger.info(err);
       break;
     }
