@@ -1,0 +1,1692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2618731-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments)}
+	gtag('js', new Date());
+	gtag('config', 'UA-2618731-1');
+</script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="ja" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="x-ua-compatible" content="chrome=1" />
+	<meta http-equiv="expires" content="3600" />
+	<meta name="keywords" content="データサービス,総合カウント,2020年10月" />
+	<base href="http://www.nicochart.jp/" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="http://res.nicochart.jp/favicon.ico" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://res.nicochart.jp/favicon.ico" />
+	<link rel="apple-touch-icon" href="http://res.nicochart.jp/img/icon.png" />
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.5.1/build/cssreset/cssreset-min.css" />
+	<link rel="stylesheet" type="text/css" href="http://res.nicochart.jp/static/common.min.css?20201001" />
+<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://res.nicochart.jp/static/ie.min.css?20201001" />
+<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://res.nicochart.jp/static/common.min.js?20201001"></script>
+<!--[if lt IE 7]>
+	<script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+<![endif]-->
+	<title>2020年10月 総合カウント - ニコニコチャート</title>
+</head>
+<body id="top" class="service total">
+<div id="wrapper">
+<div id="header">
+	<p id="logo"><a href="http://www.nicochart.jp/"><img src="http://res.nicochart.jp/img/logo.gif" alt="ニコニコチャート ニコニコ動画のランキングデータベース" /></a></p>
+	<form id="header-form" action="http://www.nicochart.jp/redirect" method="get">
+	<ul>
+		<li><input type="radio" class="radio" name="mode" value="s" id="header-form-s" checked="checked" /><label for="header-form-s">キーワード</label></li>
+		<li><input type="radio" class="radio" name="mode" value="t" id="header-form-t" /><label for="header-form-t">タグ</label></li>
+		<li><input type="radio" class="radio" name="mode" value="n" id="header-form-n" /><label for="header-form-n">ニックネーム</label></li>
+		<li><input type="radio" class="radio" name="mode" value="r" id="header-form-r" /><label for="header-form-r">権利名</label></li>
+		<li><input type="radio" class="radio" name="mode" value="u" id="header-form-u" /><label for="header-form-u">ユーザーID</label></li>
+	</ul>
+	<p>
+		<input type="text" class="text" name="path" value="" />
+		<input type="submit" class="button" value="検索" />
+	</p>
+	</form>
+	<ul id="ranking-link">
+		<li class="seiga"><a href="https://seiga.nicovideo.jp/illust/ranking/point/hourly/">ニコニコ静画<br />毎時ランキング</a></li>
+		<li class="video"><a href="https://www.nicovideo.jp/ranking/genre/all?term=hour">ニコニコ動画<br />毎時ランキング</a></li>
+	</ul>
+</div>
+<ul id="header-nav">
+	<li class="nav-index"><a href="http://www.nicochart.jp/">トップページ</a></li>
+	<li class="nav-archive"><a href="http://www.nicochart.jp/archive/">過去のランキング</a><ul>
+		<li><a href="http://www.nicochart.jp/ranking/">デイリーランキング</a></li>
+		<li><a href="http://www.nicochart.jp/ranking/total">合計ランキング</a></li>
+		<li><a href="http://www.nicochart.jp/top3/">トップチャート</a><ul>
+			<li><a href="http://www.nicochart.jp/top3/">デイリー</a></li>
+			<li><a href="http://www.nicochart.jp/top3/total">合計</a></li>
+			<li><a href="http://www.nicochart.jp/top3/weekly">週間</a></li>
+			<li><a href="http://www.nicochart.jp/top3/monthly">月間</a></li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/matrix/">グループマトリクス</a></li>
+	</ul></li>
+	<li class="nav-now"><a href="http://now.nicochart.jp/now/">現在のランキング</a><ul>
+		<li><a href="http://now.nicochart.jp/today/">本日</a><ul>
+			<li><a href="http://now.nicochart.jp/today/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/today/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/today/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/today/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/hourly/">毎時</a><ul>
+			<li><a href="http://now.nicochart.jp/hourly/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/newarrival/">新着</a><ul>
+			<li><a href="http://now.nicochart.jp/newarrival/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/latest/">24時間</a><ul>
+			<li><a href="http://now.nicochart.jp/latest/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/latest/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/latest/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/latest/mylist">マイリスト</a></li>
+		</ul></li>
+	</ul></li>
+	<li class="nav-other"><a href="http://www.nicochart.jp/other/">その他のランキング</a><ul>
+		<li><a href="http://www.nicochart.jp/stamp_ranking/">スタンプランキング</a></li>
+	</ul></li>
+	<li class="nav-service"><a href="http://www.nicochart.jp/service/">データサービス</a><ul>
+		<li><a href="http://www.nicochart.jp/service/video">動画情報</a></li>
+		<li><a href="http://www.nicochart.jp/service/list">リスト情報</a></li>
+		<li><a href="http://www.nicochart.jp/total/">総合カウント</a></li>
+		<li><a href="http://www.nicochart.jp/major_tag/">人気のタグ</a></li>
+		<li><a href="http://www.nicochart.jp/service/#other-service">その他のデータ</a></li>
+	</ul></li>
+	<li class="nav-about"><a href="http://www.nicochart.jp/about/">このサイトについて</a><ul>
+		<li><a href="http://www.nicochart.jp/about/status">サイトステータス</a></li>
+		<li><a href="http://www.nicochart.jp/about/accident">ランキング事故</a></li>
+		<li><a href="http://www.nicochart.jp/about/mylist">ピックアップマイリスト</a></li>
+		<li><a href="http://www.nicochart.jp/about/major/">数の多い順リスト</a><ul>
+			<li><a href="http://www.nicochart.jp/about/major/tag">タグ</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/name">ニックネーム</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/right">権利名</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/user">ユーザーID</a></li>
+		</ul></li>
+		<li><a href="http://res.nicochart.jp/webclap">WEB拍手</a></li>
+		<li><a href="http://www.nicochart.jp/blog/">管理者ブログ</a></li>
+	</ul></li>
+</ul>
+<ol id="topic-path">
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.nicochart.jp/" itemprop="url"><span itemprop="title">トップ</span></a></li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="service/" itemprop="url"><span itemprop="title">データサービス</span></a></li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="total/" itemprop="url"><span itemprop="title">総合カウント</span></a></li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">2020年10月</span></li>
+</ol>
+<div id="article">
+	<h1><em>2020年10月</em> 総合カウント</h1>
+	<p>
+		1時間ごとの総動画数・総再生数・総コメント数の記録です。<br />
+		<a href="total/">1日ごとの記録を見る</a><br />
+	</p>
+	<h2>2020年10月のデータ</h2>
+<div class="calendar-option">
+	<ul class="option-menu">
+	<li class="year"><ul>
+		<li><a href="total/200710">2007年</a></li>
+		<li><a href="total/200810">2008年</a></li>
+		<li><a href="total/200910">2009年</a></li>
+		<li><a href="total/201010">2010年</a></li>
+		<li><a href="total/201110">2011年</a></li>
+		<li><a href="total/201210">2012年</a></li>
+		<li><a href="total/201310">2013年</a></li>
+		<li><a href="total/201410">2014年</a></li>
+		<li><a href="total/201510">2015年</a></li>
+		<li><a href="total/201610">2016年</a></li>
+		<li><a href="total/201710">2017年</a></li>
+		<li><a href="total/201810">2018年</a></li>
+		<li><a href="total/201910">2019年</a></li>
+		<li><em>2020年</em></li>
+	</ul></li>
+	<li class="month"><ul>
+		<li><a href="total/202009">&lt; 前の月</a></li>
+		<li><a href="total/202001">01月</a></li>
+		<li><a href="total/202002">02月</a></li>
+		<li><a href="total/202003">03月</a></li>
+		<li><a href="total/202004">04月</a></li>
+		<li><a href="total/202005">05月</a></li>
+		<li><a href="total/202006">06月</a></li>
+		<li><a href="total/202007">07月</a></li>
+		<li><a href="total/202008">08月</a></li>
+		<li><a href="total/202009">09月</a></li>
+		<li><em>10月</em></li>
+		<li><span class="nothing">11月</span></li>
+		<li><span class="nothing">12月</span></li>
+		<li><span class="nothing">次の月 &gt;</span></li>
+	</ul></li>
+	</ul>
+</div>
+<div id="total-table">
+	<table>
+	<caption>2020年10月</caption>
+	<thead>
+	<tr class="first">
+		<th class="date" rowspan="2">日付</th>
+		<th class="hour" rowspan="2">時</th>
+		<th colspan="3">前回差分</th>
+		<th colspan="3">合計</th>
+	</tr>
+	<tr class="second">
+		<th class="video-total-diff">動画数</th>
+		<th class="view-total-diff">再生数</th>
+		<th class="res-total-diff">コメント数</th>
+		<th class="video-total">総動画数</th>
+		<th class="view-total">総再生数</th>
+		<th class="res-total">総コメント数</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr id="d2020100705" class="wo me">
+		<td class="date" id="d07" rowspan="6">2020年10月07日(<span class="wed">水</span>)</td>
+		<td class="hour" title="2020-10-07 05:00:00">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,983,006</td>
+		<td class="view-total">113,343,654,341</td>
+		<td class="res-total">5,882,486,478</td>
+	</tr>
+	<tr id="d2020100704" class="wo me">
+		<td class="hour" title="2020-10-07 04:00:00">4時</td>
+		<td class="video-total-diff">75</td>
+		<td class="view-total-diff">1,001,264</td>
+		<td class="res-total-diff">29,771</td>
+		<td class="video-total">17,983,006</td>
+		<td class="view-total">113,343,654,341</td>
+		<td class="res-total">5,882,486,478</td>
+	</tr>
+	<tr id="d2020100703" class="wo me">
+		<td class="hour" title="2020-10-07 03:00:00">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,982,931</td>
+		<td class="view-total">113,342,653,077</td>
+		<td class="res-total">5,882,456,707</td>
+	</tr>
+	<tr id="d2020100702" class="wo me">
+		<td class="hour" title="2020-10-07 02:00:00">2時</td>
+		<td class="video-total-diff">356</td>
+		<td class="view-total-diff">2,318,787</td>
+		<td class="res-total-diff">56,036</td>
+		<td class="video-total">17,982,931</td>
+		<td class="view-total">113,342,653,077</td>
+		<td class="res-total">5,882,456,707</td>
+	</tr>
+	<tr id="d2020100701" class="wo me">
+		<td class="hour" title="2020-10-07 01:00:00">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,982,575</td>
+		<td class="view-total">113,340,334,290</td>
+		<td class="res-total">5,882,400,671</td>
+	</tr>
+	<tr id="d2020100700" class="wo me">
+		<td class="hour" title="2020-10-07 00:00:00">0時</td>
+		<td class="video-total-diff">522</td>
+		<td class="view-total-diff">2,779,426</td>
+		<td class="res-total-diff">73,272</td>
+		<td class="video-total">17,982,575</td>
+		<td class="view-total">113,340,334,290</td>
+		<td class="res-total">5,882,400,671</td>
+	</tr>
+	<tr id="d2020100623" class="wo me">
+		<td class="date" id="d06" rowspan="24">2020年10月06日(<span class="tue">火</span>)</td>
+		<td class="hour" title="2020-10-06 23:00:00">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,982,053</td>
+		<td class="view-total">113,337,554,864</td>
+		<td class="res-total">5,882,327,399</td>
+	</tr>
+	<tr id="d2020100622" class="wo me">
+		<td class="hour" title="2020-10-06 22:00:01">22時</td>
+		<td class="video-total-diff">489</td>
+		<td class="view-total-diff">2,382,388</td>
+		<td class="res-total-diff">66,292</td>
+		<td class="video-total">17,982,053</td>
+		<td class="view-total">113,337,554,864</td>
+		<td class="res-total">5,882,327,399</td>
+	</tr>
+	<tr id="d2020100621" class="wo me">
+		<td class="hour" title="2020-10-06 21:00:01">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,981,564</td>
+		<td class="view-total">113,335,172,476</td>
+		<td class="res-total">5,882,261,107</td>
+	</tr>
+	<tr id="d2020100620" class="wo me">
+		<td class="hour" title="2020-10-06 20:00:00">20時</td>
+		<td class="video-total-diff">477</td>
+		<td class="view-total-diff">2,072,673</td>
+		<td class="res-total-diff">49,697</td>
+		<td class="video-total">17,981,564</td>
+		<td class="view-total">113,335,172,476</td>
+		<td class="res-total">5,882,261,107</td>
+	</tr>
+	<tr id="d2020100619" class="wo me">
+		<td class="hour" title="2020-10-06 19:00:00">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,981,087</td>
+		<td class="view-total">113,333,099,803</td>
+		<td class="res-total">5,882,211,410</td>
+	</tr>
+	<tr id="d2020100618" class="wo me">
+		<td class="hour" title="2020-10-06 18:00:00">18時</td>
+		<td class="video-total-diff">6</td>
+		<td class="view-total-diff">1,048,107</td>
+		<td class="res-total-diff">30,819</td>
+		<td class="video-total">17,981,087</td>
+		<td class="view-total">113,333,099,803</td>
+		<td class="res-total">5,882,211,410</td>
+	</tr>
+	<tr id="d2020100617" class="wo me">
+		<td class="hour" title="2020-10-06 17:00:00">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,981,081</td>
+		<td class="view-total">113,332,051,696</td>
+		<td class="res-total">5,882,180,591</td>
+	</tr>
+	<tr id="d2020100616" class="wo me">
+		<td class="hour" title="2020-10-06 16:00:00">16時</td>
+		<td class="video-total-diff">154</td>
+		<td class="view-total-diff">1,435,209</td>
+		<td class="res-total-diff">27,970</td>
+		<td class="video-total">17,981,081</td>
+		<td class="view-total">113,332,051,696</td>
+		<td class="res-total">5,882,180,591</td>
+	</tr>
+	<tr id="d2020100615" class="wo me">
+		<td class="hour" title="2020-10-06 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,927</td>
+		<td class="view-total">113,330,616,487</td>
+		<td class="res-total">5,882,152,621</td>
+	</tr>
+	<tr id="d2020100614" class="wo me">
+		<td class="hour" title="2020-10-06 14:00:00">14時</td>
+		<td class="video-total-diff">188</td>
+		<td class="view-total-diff">1,280,842</td>
+		<td class="res-total-diff">25,664</td>
+		<td class="video-total">17,980,927</td>
+		<td class="view-total">113,330,616,487</td>
+		<td class="res-total">5,882,152,621</td>
+	</tr>
+	<tr id="d2020100613" class="wo me">
+		<td class="hour" title="2020-10-06 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,739</td>
+		<td class="view-total">113,329,335,645</td>
+		<td class="res-total">5,882,126,957</td>
+	</tr>
+	<tr id="d2020100612" class="wo me">
+		<td class="hour" title="2020-10-06 12:00:00">12時</td>
+		<td class="video-total-diff">110</td>
+		<td class="view-total-diff">1,153,471</td>
+		<td class="res-total-diff">19,489</td>
+		<td class="video-total">17,980,739</td>
+		<td class="view-total">113,329,335,645</td>
+		<td class="res-total">5,882,126,957</td>
+	</tr>
+	<tr id="d2020100611" class="wo me">
+		<td class="hour" title="2020-10-06 11:00:01">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,629</td>
+		<td class="view-total">113,328,182,174</td>
+		<td class="res-total">5,882,107,468</td>
+	</tr>
+	<tr id="d2020100610" class="wo me">
+		<td class="hour" title="2020-10-06 10:00:00">10時</td>
+		<td class="video-total-diff">125</td>
+		<td class="view-total-diff">1,400,428</td>
+		<td class="res-total-diff">16,593</td>
+		<td class="video-total">17,980,629</td>
+		<td class="view-total">113,328,182,174</td>
+		<td class="res-total">5,882,107,468</td>
+	</tr>
+	<tr id="d2020100609" class="wo me">
+		<td class="hour" title="2020-10-06 09:00:01">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,504</td>
+		<td class="view-total">113,326,781,746</td>
+		<td class="res-total">5,882,090,875</td>
+	</tr>
+	<tr id="d2020100608" class="wo me">
+		<td class="hour" title="2020-10-06 08:00:00">8時</td>
+		<td class="video-total-diff down">-15</td>
+		<td class="view-total-diff">872,239</td>
+		<td class="res-total-diff">12,982</td>
+		<td class="video-total">17,980,504</td>
+		<td class="view-total">113,326,781,746</td>
+		<td class="res-total">5,882,090,875</td>
+	</tr>
+	<tr id="d2020100607" class="wo me">
+		<td class="hour" title="2020-10-06 07:00:00">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,519</td>
+		<td class="view-total">113,325,909,507</td>
+		<td class="res-total">5,882,077,893</td>
+	</tr>
+	<tr id="d2020100606" class="wo me">
+		<td class="hour" title="2020-10-06 06:00:00">6時</td>
+		<td class="video-total-diff">77</td>
+		<td class="view-total-diff">902,404</td>
+		<td class="res-total-diff">14,176</td>
+		<td class="video-total">17,980,519</td>
+		<td class="view-total">113,325,909,507</td>
+		<td class="res-total">5,882,077,893</td>
+	</tr>
+	<tr id="d2020100605" class="wo me">
+		<td class="hour" title="2020-10-06 05:00:00">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,442</td>
+		<td class="view-total">113,325,007,103</td>
+		<td class="res-total">5,882,063,717</td>
+	</tr>
+	<tr id="d2020100604" class="wo me">
+		<td class="hour" title="2020-10-06 04:00:00">4時</td>
+		<td class="video-total-diff">153</td>
+		<td class="view-total-diff">1,505,696</td>
+		<td class="res-total-diff">33,468</td>
+		<td class="video-total">17,980,442</td>
+		<td class="view-total">113,325,007,103</td>
+		<td class="res-total">5,882,063,717</td>
+	</tr>
+	<tr id="d2020100603" class="wo me">
+		<td class="hour" title="2020-10-06 03:00:01">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,980,289</td>
+		<td class="view-total">113,323,501,407</td>
+		<td class="res-total">5,882,030,249</td>
+	</tr>
+	<tr id="d2020100602" class="wo me">
+		<td class="hour" title="2020-10-06 02:00:00">2時</td>
+		<td class="video-total-diff">379</td>
+		<td class="view-total-diff">2,512,866</td>
+		<td class="res-total-diff">55,449</td>
+		<td class="video-total">17,980,289</td>
+		<td class="view-total">113,323,501,407</td>
+		<td class="res-total">5,882,030,249</td>
+	</tr>
+	<tr id="d2020100601" class="wo me">
+		<td class="hour" title="2020-10-06 01:00:00">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,979,910</td>
+		<td class="view-total">113,320,988,541</td>
+		<td class="res-total">5,881,974,800</td>
+	</tr>
+	<tr id="d2020100600" class="wo me">
+		<td class="hour" title="2020-10-06 00:00:00">0時</td>
+		<td class="video-total-diff">437</td>
+		<td class="view-total-diff">3,147,022</td>
+		<td class="res-total-diff">80,247</td>
+		<td class="video-total">17,979,910</td>
+		<td class="view-total">113,320,988,541</td>
+		<td class="res-total">5,881,974,800</td>
+	</tr>
+	<tr id="d2020100523" class="we me">
+		<td class="date" id="d05" rowspan="24">2020年10月05日(<span class="mon">月</span>)</td>
+		<td class="hour" title="2020-10-05 23:00:00">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,979,473</td>
+		<td class="view-total">113,317,841,519</td>
+		<td class="res-total">5,881,894,553</td>
+	</tr>
+	<tr id="d2020100522" class="we me">
+		<td class="hour" title="2020-10-05 22:00:00">22時</td>
+		<td class="video-total-diff">606</td>
+		<td class="view-total-diff">2,467,992</td>
+		<td class="res-total-diff">83,254</td>
+		<td class="video-total">17,979,473</td>
+		<td class="view-total">113,317,841,519</td>
+		<td class="res-total">5,881,894,553</td>
+	</tr>
+	<tr id="d2020100521" class="we me">
+		<td class="hour" title="2020-10-05 21:00:01">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,867</td>
+		<td class="view-total">113,315,373,527</td>
+		<td class="res-total">5,881,811,299</td>
+	</tr>
+	<tr id="d2020100520" class="we me">
+		<td class="hour" title="2020-10-05 20:00:00">20時</td>
+		<td class="video-total-diff">489</td>
+		<td class="view-total-diff">1,949,805</td>
+		<td class="res-total-diff">71,972</td>
+		<td class="video-total">17,978,867</td>
+		<td class="view-total">113,315,373,527</td>
+		<td class="res-total">5,881,811,299</td>
+	</tr>
+	<tr id="d2020100519" class="we me">
+		<td class="hour" title="2020-10-05 19:00:00">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,378</td>
+		<td class="view-total">113,313,423,722</td>
+		<td class="res-total">5,881,739,327</td>
+	</tr>
+	<tr id="d2020100518" class="we me">
+		<td class="hour" title="2020-10-05 18:00:00">18時</td>
+		<td class="video-total-diff">151</td>
+		<td class="view-total-diff">1,614,861</td>
+		<td class="res-total-diff">34,419</td>
+		<td class="video-total">17,978,378</td>
+		<td class="view-total">113,313,423,722</td>
+		<td class="res-total">5,881,739,327</td>
+	</tr>
+	<tr id="d2020100517" class="we me">
+		<td class="hour" title="2020-10-05 17:00:00">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,227</td>
+		<td class="view-total">113,311,808,861</td>
+		<td class="res-total">5,881,704,908</td>
+	</tr>
+	<tr id="d2020100516" class="we me">
+		<td class="hour" title="2020-10-05 16:00:00">16時</td>
+		<td class="video-total-diff">39</td>
+		<td class="view-total-diff down">-204,093</td>
+		<td class="res-total-diff">30,352</td>
+		<td class="video-total">17,978,227</td>
+		<td class="view-total">113,311,808,861</td>
+		<td class="res-total">5,881,704,908</td>
+	</tr>
+	<tr id="d2020100515" class="we me">
+		<td class="hour" title="2020-10-05 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,188</td>
+		<td class="view-total">113,312,012,954</td>
+		<td class="res-total">5,881,674,556</td>
+	</tr>
+	<tr id="d2020100514" class="we me">
+		<td class="hour" title="2020-10-05 14:00:00">14時</td>
+		<td class="video-total-diff">72</td>
+		<td class="view-total-diff">1,229,458</td>
+		<td class="res-total-diff">32,582</td>
+		<td class="video-total">17,978,188</td>
+		<td class="view-total">113,312,012,954</td>
+		<td class="res-total">5,881,674,556</td>
+	</tr>
+	<tr id="d2020100513" class="we me">
+		<td class="hour" title="2020-10-05 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,116</td>
+		<td class="view-total">113,310,783,496</td>
+		<td class="res-total">5,881,641,974</td>
+	</tr>
+	<tr id="d2020100512" class="we me">
+		<td class="hour" title="2020-10-05 12:00:00">12時</td>
+		<td class="video-total-diff">86</td>
+		<td class="view-total-diff">1,197,475</td>
+		<td class="res-total-diff">23,172</td>
+		<td class="video-total">17,978,116</td>
+		<td class="view-total">113,310,783,496</td>
+		<td class="res-total">5,881,641,974</td>
+	</tr>
+	<tr id="d2020100511" class="we me">
+		<td class="hour" title="2020-10-05 11:00:00">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,030</td>
+		<td class="view-total">113,309,586,021</td>
+		<td class="res-total">5,881,618,802</td>
+	</tr>
+	<tr id="d2020100510" class="we me">
+		<td class="hour" title="2020-10-05 10:00:00">10時</td>
+		<td class="video-total-diff down">-181</td>
+		<td class="view-total-diff down">-990,252</td>
+		<td class="res-total-diff">16,922</td>
+		<td class="video-total">17,978,030</td>
+		<td class="view-total">113,309,586,021</td>
+		<td class="res-total">5,881,618,802</td>
+	</tr>
+	<tr id="d2020100509" class="we me">
+		<td class="hour" title="2020-10-05 09:00:01">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,211</td>
+		<td class="view-total">113,310,576,273</td>
+		<td class="res-total">5,881,601,880</td>
+	</tr>
+	<tr id="d2020100508" class="we me">
+		<td class="hour" title="2020-10-05 08:00:00">8時</td>
+		<td class="video-total-diff down">-70</td>
+		<td class="view-total-diff">494,594</td>
+		<td class="res-total-diff">13,730</td>
+		<td class="video-total">17,978,211</td>
+		<td class="view-total">113,310,576,273</td>
+		<td class="res-total">5,881,601,880</td>
+	</tr>
+	<tr id="d2020100507" class="we me">
+		<td class="hour" title="2020-10-05 07:00:00">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,281</td>
+		<td class="view-total">113,310,081,679</td>
+		<td class="res-total">5,881,588,150</td>
+	</tr>
+	<tr id="d2020100506" class="we me">
+		<td class="hour" title="2020-10-05 06:00:00">6時</td>
+		<td class="video-total-diff">108</td>
+		<td class="view-total-diff">1,020,642</td>
+		<td class="res-total-diff">16,349</td>
+		<td class="video-total">17,978,281</td>
+		<td class="view-total">113,310,081,679</td>
+		<td class="res-total">5,881,588,150</td>
+	</tr>
+	<tr id="d2020100505" class="we me">
+		<td class="hour" title="2020-10-05 05:00:00">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,173</td>
+		<td class="view-total">113,309,061,037</td>
+		<td class="res-total">5,881,571,801</td>
+	</tr>
+	<tr id="d2020100504" class="we me">
+		<td class="hour" title="2020-10-05 04:00:01">4時</td>
+		<td class="video-total-diff">159</td>
+		<td class="view-total-diff">1,630,013</td>
+		<td class="res-total-diff">29,561</td>
+		<td class="video-total">17,978,173</td>
+		<td class="view-total">113,309,061,037</td>
+		<td class="res-total">5,881,571,801</td>
+	</tr>
+	<tr id="d2020100503" class="we me">
+		<td class="hour" title="2020-10-05 03:00:00">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,978,014</td>
+		<td class="view-total">113,307,431,024</td>
+		<td class="res-total">5,881,542,240</td>
+	</tr>
+	<tr id="d2020100502" class="we me">
+		<td class="hour" title="2020-10-05 02:00:00">2時</td>
+		<td class="video-total-diff">310</td>
+		<td class="view-total-diff">2,415,739</td>
+		<td class="res-total-diff">53,419</td>
+		<td class="video-total">17,978,014</td>
+		<td class="view-total">113,307,431,024</td>
+		<td class="res-total">5,881,542,240</td>
+	</tr>
+	<tr id="d2020100501" class="we me">
+		<td class="hour" title="2020-10-05 01:00:00">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,977,704</td>
+		<td class="view-total">113,305,015,285</td>
+		<td class="res-total">5,881,488,821</td>
+	</tr>
+	<tr id="d2020100500" class="we me">
+		<td class="hour" title="2020-10-05 00:00:00">0時</td>
+		<td class="video-total-diff">576</td>
+		<td class="view-total-diff">2,590,145</td>
+		<td class="res-total-diff">86,351</td>
+		<td class="video-total">17,977,704</td>
+		<td class="view-total">113,305,015,285</td>
+		<td class="res-total">5,881,488,821</td>
+	</tr>
+	<tr id="d2020100423" class="we me">
+		<td class="date" id="d04" rowspan="24">2020年10月04日(<span class="sun">日</span>)</td>
+		<td class="hour" title="2020-10-04 23:00:03">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,977,128</td>
+		<td class="view-total">113,302,425,140</td>
+		<td class="res-total">5,881,402,470</td>
+	</tr>
+	<tr id="d2020100422" class="we me">
+		<td class="hour" title="2020-10-04 22:00:01">22時</td>
+		<td class="video-total-diff">686</td>
+		<td class="view-total-diff">2,298,700</td>
+		<td class="res-total-diff">92,798</td>
+		<td class="video-total">17,977,128</td>
+		<td class="view-total">113,302,425,140</td>
+		<td class="res-total">5,881,402,470</td>
+	</tr>
+	<tr id="d2020100421" class="we me">
+		<td class="hour" title="2020-10-04 21:00:00">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,976,442</td>
+		<td class="view-total">113,300,126,440</td>
+		<td class="res-total">5,881,309,672</td>
+	</tr>
+	<tr id="d2020100420" class="we me">
+		<td class="hour" title="2020-10-04 20:00:00">20時</td>
+		<td class="video-total-diff">641</td>
+		<td class="view-total-diff">2,392,407</td>
+		<td class="res-total-diff">74,650</td>
+		<td class="video-total">17,976,442</td>
+		<td class="view-total">113,300,126,440</td>
+		<td class="res-total">5,881,309,672</td>
+	</tr>
+	<tr id="d2020100419" class="we me">
+		<td class="hour" title="2020-10-04 19:00:00">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,975,801</td>
+		<td class="view-total">113,297,734,033</td>
+		<td class="res-total">5,881,235,022</td>
+	</tr>
+	<tr id="d2020100418" class="we me">
+		<td class="hour" title="2020-10-04 18:00:00">18時</td>
+		<td class="video-total-diff">377</td>
+		<td class="view-total-diff">2,042,706</td>
+		<td class="res-total-diff">51,209</td>
+		<td class="video-total">17,975,801</td>
+		<td class="view-total">113,297,734,033</td>
+		<td class="res-total">5,881,235,022</td>
+	</tr>
+	<tr id="d2020100417" class="we me">
+		<td class="hour" title="2020-10-04 17:00:00">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,975,424</td>
+		<td class="view-total">113,295,691,327</td>
+		<td class="res-total">5,881,183,813</td>
+	</tr>
+	<tr id="d2020100416" class="we me">
+		<td class="hour" title="2020-10-04 16:00:00">16時</td>
+		<td class="video-total-diff">230</td>
+		<td class="view-total-diff">2,124,050</td>
+		<td class="res-total-diff">49,644</td>
+		<td class="video-total">17,975,424</td>
+		<td class="view-total">113,295,691,327</td>
+		<td class="res-total">5,881,183,813</td>
+	</tr>
+	<tr id="d2020100415" class="we me">
+		<td class="hour" title="2020-10-04 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,975,194</td>
+		<td class="view-total">113,293,567,277</td>
+		<td class="res-total">5,881,134,169</td>
+	</tr>
+	<tr id="d2020100414" class="we me">
+		<td class="hour" title="2020-10-04 14:00:01">14時</td>
+		<td class="video-total-diff">262</td>
+		<td class="view-total-diff">1,507,722</td>
+		<td class="res-total-diff">44,717</td>
+		<td class="video-total">17,975,194</td>
+		<td class="view-total">113,293,567,277</td>
+		<td class="res-total">5,881,134,169</td>
+	</tr>
+	<tr id="d2020100413" class="we me">
+		<td class="hour" title="2020-10-04 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,932</td>
+		<td class="view-total">113,292,059,555</td>
+		<td class="res-total">5,881,089,452</td>
+	</tr>
+	<tr id="d2020100412" class="we me">
+		<td class="hour" title="2020-10-04 12:00:00">12時</td>
+		<td class="video-total-diff">87</td>
+		<td class="view-total-diff">1,619,639</td>
+		<td class="res-total-diff">37,868</td>
+		<td class="video-total">17,974,932</td>
+		<td class="view-total">113,292,059,555</td>
+		<td class="res-total">5,881,089,452</td>
+	</tr>
+	<tr id="d2020100411" class="we me">
+		<td class="hour" title="2020-10-04 11:00:04">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,845</td>
+		<td class="view-total">113,290,439,916</td>
+		<td class="res-total">5,881,051,584</td>
+	</tr>
+	<tr id="d2020100410" class="we me">
+		<td class="hour" title="2020-10-04 10:00:00">10時</td>
+		<td class="video-total-diff">152</td>
+		<td class="view-total-diff">1,177,253</td>
+		<td class="res-total-diff">30,862</td>
+		<td class="video-total">17,974,845</td>
+		<td class="view-total">113,290,439,916</td>
+		<td class="res-total">5,881,051,584</td>
+	</tr>
+	<tr id="d2020100409" class="we me">
+		<td class="hour" title="2020-10-04 09:00:00">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,693</td>
+		<td class="view-total">113,289,262,663</td>
+		<td class="res-total">5,881,020,722</td>
+	</tr>
+	<tr id="d2020100408" class="we me">
+		<td class="hour" title="2020-10-04 08:00:00">8時</td>
+		<td class="video-total-diff">59</td>
+		<td class="view-total-diff">859,684</td>
+		<td class="res-total-diff">17,043</td>
+		<td class="video-total">17,974,693</td>
+		<td class="view-total">113,289,262,663</td>
+		<td class="res-total">5,881,020,722</td>
+	</tr>
+	<tr id="d2020100407" class="we me">
+		<td class="hour" title="2020-10-04 07:00:00">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,634</td>
+		<td class="view-total">113,288,402,979</td>
+		<td class="res-total">5,881,003,679</td>
+	</tr>
+	<tr id="d2020100406" class="we me">
+		<td class="hour" title="2020-10-04 06:00:00">6時</td>
+		<td class="video-total-diff">95</td>
+		<td class="view-total-diff">1,005,988</td>
+		<td class="res-total-diff">19,741</td>
+		<td class="video-total">17,974,634</td>
+		<td class="view-total">113,288,402,979</td>
+		<td class="res-total">5,881,003,679</td>
+	</tr>
+	<tr id="d2020100405" class="we me">
+		<td class="hour" title="2020-10-04 05:00:01">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,539</td>
+		<td class="view-total">113,287,396,991</td>
+		<td class="res-total">5,880,983,938</td>
+	</tr>
+	<tr id="d2020100404" class="we me">
+		<td class="hour" title="2020-10-04 04:00:00">4時</td>
+		<td class="video-total-diff">178</td>
+		<td class="view-total-diff">1,482,208</td>
+		<td class="res-total-diff">36,200</td>
+		<td class="video-total">17,974,539</td>
+		<td class="view-total">113,287,396,991</td>
+		<td class="res-total">5,880,983,938</td>
+	</tr>
+	<tr id="d2020100403" class="we me">
+		<td class="hour" title="2020-10-04 03:00:00">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,974,361</td>
+		<td class="view-total">113,285,914,783</td>
+		<td class="res-total">5,880,947,738</td>
+	</tr>
+	<tr id="d2020100402" class="we me">
+		<td class="hour" title="2020-10-04 02:00:00">2時</td>
+		<td class="video-total-diff">445</td>
+		<td class="view-total-diff">3,236,550</td>
+		<td class="res-total-diff">62,695</td>
+		<td class="video-total">17,974,361</td>
+		<td class="view-total">113,285,914,783</td>
+		<td class="res-total">5,880,947,738</td>
+	</tr>
+	<tr id="d2020100401" class="we me">
+		<td class="hour" title="2020-10-04 01:00:01">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,973,916</td>
+		<td class="view-total">113,282,678,233</td>
+		<td class="res-total">5,880,885,043</td>
+	</tr>
+	<tr id="d2020100400" class="we me">
+		<td class="hour" title="2020-10-04 00:00:00">0時</td>
+		<td class="video-total-diff">431</td>
+		<td class="view-total-diff">2,613,789</td>
+		<td class="res-total-diff">78,561</td>
+		<td class="video-total">17,973,916</td>
+		<td class="view-total">113,282,678,233</td>
+		<td class="res-total">5,880,885,043</td>
+	</tr>
+	<tr id="d2020100323" class="we me">
+		<td class="date" id="d03" rowspan="24">2020年10月03日(<span class="sat">土</span>)</td>
+		<td class="hour" title="2020-10-03 23:00:00">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,973,485</td>
+		<td class="view-total">113,280,064,444</td>
+		<td class="res-total">5,880,806,482</td>
+	</tr>
+	<tr id="d2020100322" class="we me">
+		<td class="hour" title="2020-10-03 22:00:01">22時</td>
+		<td class="video-total-diff">786</td>
+		<td class="view-total-diff">2,079,557</td>
+		<td class="res-total-diff">75,295</td>
+		<td class="video-total">17,973,485</td>
+		<td class="view-total">113,280,064,444</td>
+		<td class="res-total">5,880,806,482</td>
+	</tr>
+	<tr id="d2020100321" class="we me">
+		<td class="hour" title="2020-10-03 21:00:00">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,972,699</td>
+		<td class="view-total">113,277,984,887</td>
+		<td class="res-total">5,880,731,187</td>
+	</tr>
+	<tr id="d2020100320" class="we me">
+		<td class="hour" title="2020-10-03 20:00:00">20時</td>
+		<td class="video-total-diff">486</td>
+		<td class="view-total-diff">471,505</td>
+		<td class="res-total-diff">55,372</td>
+		<td class="video-total">17,972,699</td>
+		<td class="view-total">113,277,984,887</td>
+		<td class="res-total">5,880,731,187</td>
+	</tr>
+	<tr id="d2020100319" class="we me">
+		<td class="hour" title="2020-10-03 19:00:00">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,972,213</td>
+		<td class="view-total">113,277,513,382</td>
+		<td class="res-total">5,880,675,815</td>
+	</tr>
+	<tr id="d2020100318" class="we me">
+		<td class="hour" title="2020-10-03 18:00:00">18時</td>
+		<td class="video-total-diff">207</td>
+		<td class="view-total-diff">267,865</td>
+		<td class="res-total-diff">44,147</td>
+		<td class="video-total">17,972,213</td>
+		<td class="view-total">113,277,513,382</td>
+		<td class="res-total">5,880,675,815</td>
+	</tr>
+	<tr id="d2020100317" class="we me">
+		<td class="hour" title="2020-10-03 17:00:01">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,972,006</td>
+		<td class="view-total">113,277,245,517</td>
+		<td class="res-total">5,880,631,668</td>
+	</tr>
+	<tr id="d2020100316" class="we me">
+		<td class="hour" title="2020-10-03 16:00:00">16時</td>
+		<td class="video-total-diff">350</td>
+		<td class="view-total-diff">3,290,470</td>
+		<td class="res-total-diff">46,581</td>
+		<td class="video-total">17,972,006</td>
+		<td class="view-total">113,277,245,517</td>
+		<td class="res-total">5,880,631,668</td>
+	</tr>
+	<tr id="d2020100315" class="we me">
+		<td class="hour" title="2020-10-03 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,971,656</td>
+		<td class="view-total">113,273,955,047</td>
+		<td class="res-total">5,880,585,087</td>
+	</tr>
+	<tr id="d2020100314" class="we me">
+		<td class="hour" title="2020-10-03 14:00:00">14時</td>
+		<td class="video-total-diff">550</td>
+		<td class="view-total-diff">3,233,560</td>
+		<td class="res-total-diff">45,371</td>
+		<td class="video-total">17,971,656</td>
+		<td class="view-total">113,273,955,047</td>
+		<td class="res-total">5,880,585,087</td>
+	</tr>
+	<tr id="d2020100313" class="we me">
+		<td class="hour" title="2020-10-03 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,971,106</td>
+		<td class="view-total">113,270,721,487</td>
+		<td class="res-total">5,880,539,716</td>
+	</tr>
+	<tr id="d2020100312" class="we me">
+		<td class="hour" title="2020-10-03 12:00:00">12時</td>
+		<td class="video-total-diff">206</td>
+		<td class="view-total-diff">1,379,028</td>
+		<td class="res-total-diff">35,980</td>
+		<td class="video-total">17,971,106</td>
+		<td class="view-total">113,270,721,487</td>
+		<td class="res-total">5,880,539,716</td>
+	</tr>
+	<tr id="d2020100311" class="we me">
+		<td class="hour" title="2020-10-03 11:00:00">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,900</td>
+		<td class="view-total">113,269,342,459</td>
+		<td class="res-total">5,880,503,736</td>
+	</tr>
+	<tr id="d2020100310" class="we me">
+		<td class="hour" title="2020-10-03 10:00:00">10時</td>
+		<td class="video-total-diff">71</td>
+		<td class="view-total-diff">1,199,048</td>
+		<td class="res-total-diff">24,231</td>
+		<td class="video-total">17,970,900</td>
+		<td class="view-total">113,269,342,459</td>
+		<td class="res-total">5,880,503,736</td>
+	</tr>
+	<tr id="d2020100309" class="we me">
+		<td class="hour" title="2020-10-03 09:00:01">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,829</td>
+		<td class="view-total">113,268,143,411</td>
+		<td class="res-total">5,880,479,505</td>
+	</tr>
+	<tr id="d2020100308" class="we me">
+		<td class="hour" title="2020-10-03 08:00:01">8時</td>
+		<td class="video-total-diff">137</td>
+		<td class="view-total-diff">775,512</td>
+		<td class="res-total-diff">15,048</td>
+		<td class="video-total">17,970,829</td>
+		<td class="view-total">113,268,143,411</td>
+		<td class="res-total">5,880,479,505</td>
+	</tr>
+	<tr id="d2020100307" class="we me">
+		<td class="hour" title="2020-10-03 07:00:00">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,692</td>
+		<td class="view-total">113,267,367,899</td>
+		<td class="res-total">5,880,464,457</td>
+	</tr>
+	<tr id="d2020100306" class="we me">
+		<td class="hour" title="2020-10-03 06:00:00">6時</td>
+		<td class="video-total-diff">69</td>
+		<td class="view-total-diff down">-2,686,272</td>
+		<td class="res-total-diff">24,061</td>
+		<td class="video-total">17,970,692</td>
+		<td class="view-total">113,267,367,899</td>
+		<td class="res-total">5,880,464,457</td>
+	</tr>
+	<tr id="d2020100305" class="we me">
+		<td class="hour" title="2020-10-03 05:00:00">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,623</td>
+		<td class="view-total">113,270,054,171</td>
+		<td class="res-total">5,880,440,396</td>
+	</tr>
+	<tr id="d2020100304" class="we me">
+		<td class="hour" title="2020-10-03 04:00:00">4時</td>
+		<td class="video-total-diff">176</td>
+		<td class="view-total-diff">1,228,965</td>
+		<td class="res-total-diff">32,470</td>
+		<td class="video-total">17,970,623</td>
+		<td class="view-total">113,270,054,171</td>
+		<td class="res-total">5,880,440,396</td>
+	</tr>
+	<tr id="d2020100303" class="we me">
+		<td class="hour" title="2020-10-03 03:00:01">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,447</td>
+		<td class="view-total">113,268,825,206</td>
+		<td class="res-total">5,880,407,926</td>
+	</tr>
+	<tr id="d2020100302" class="we me">
+		<td class="hour" title="2020-10-03 02:00:00">2時</td>
+		<td class="video-total-diff">372</td>
+		<td class="view-total-diff">2,424,906</td>
+		<td class="res-total-diff">60,536</td>
+		<td class="video-total">17,970,447</td>
+		<td class="view-total">113,268,825,206</td>
+		<td class="res-total">5,880,407,926</td>
+	</tr>
+	<tr id="d2020100301" class="we me">
+		<td class="hour" title="2020-10-03 01:00:00">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,970,075</td>
+		<td class="view-total">113,266,400,300</td>
+		<td class="res-total">5,880,347,390</td>
+	</tr>
+	<tr id="d2020100300" class="we me">
+		<td class="hour" title="2020-10-03 00:00:00">0時</td>
+		<td class="video-total-diff">431</td>
+		<td class="view-total-diff">1,757,729</td>
+		<td class="res-total-diff">80,495</td>
+		<td class="video-total">17,970,075</td>
+		<td class="view-total">113,266,400,300</td>
+		<td class="res-total">5,880,347,390</td>
+	</tr>
+	<tr id="d2020100223" class="we me">
+		<td class="date" id="d02" rowspan="24">2020年10月02日(<span class="fri">金</span>)</td>
+		<td class="hour" title="2020-10-02 23:00:00">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,969,644</td>
+		<td class="view-total">113,264,642,571</td>
+		<td class="res-total">5,880,266,895</td>
+	</tr>
+	<tr id="d2020100222" class="we me">
+		<td class="hour" title="2020-10-02 22:00:00">22時</td>
+		<td class="video-total-diff">737</td>
+		<td class="view-total-diff">2,415,639</td>
+		<td class="res-total-diff">77,395</td>
+		<td class="video-total">17,969,644</td>
+		<td class="view-total">113,264,642,571</td>
+		<td class="res-total">5,880,266,895</td>
+	</tr>
+	<tr id="d2020100221" class="we me">
+		<td class="hour" title="2020-10-02 21:00:01">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,968,907</td>
+		<td class="view-total">113,262,226,932</td>
+		<td class="res-total">5,880,189,500</td>
+	</tr>
+	<tr id="d2020100220" class="we me">
+		<td class="hour" title="2020-10-02 20:00:00">20時</td>
+		<td class="video-total-diff">611</td>
+		<td class="view-total-diff">1,678,830</td>
+		<td class="res-total-diff">53,913</td>
+		<td class="video-total">17,968,907</td>
+		<td class="view-total">113,262,226,932</td>
+		<td class="res-total">5,880,189,500</td>
+	</tr>
+	<tr id="d2020100219" class="we me">
+		<td class="hour" title="2020-10-02 19:00:00">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,968,296</td>
+		<td class="view-total">113,260,548,102</td>
+		<td class="res-total">5,880,135,587</td>
+	</tr>
+	<tr id="d2020100218" class="we me">
+		<td class="hour" title="2020-10-02 18:00:00">18時</td>
+		<td class="video-total-diff">109</td>
+		<td class="view-total-diff">1,171,308</td>
+		<td class="res-total-diff">32,596</td>
+		<td class="video-total">17,968,296</td>
+		<td class="view-total">113,260,548,102</td>
+		<td class="res-total">5,880,135,587</td>
+	</tr>
+	<tr id="d2020100217" class="we me">
+		<td class="hour" title="2020-10-02 17:00:00">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,968,187</td>
+		<td class="view-total">113,259,376,794</td>
+		<td class="res-total">5,880,102,991</td>
+	</tr>
+	<tr id="d2020100216" class="we me">
+		<td class="hour" title="2020-10-02 16:00:00">16時</td>
+		<td class="video-total-diff">14</td>
+		<td class="view-total-diff down">-317,156</td>
+		<td class="res-total-diff">31,424</td>
+		<td class="video-total">17,968,187</td>
+		<td class="view-total">113,259,376,794</td>
+		<td class="res-total">5,880,102,991</td>
+	</tr>
+	<tr id="d2020100215" class="we me">
+		<td class="hour" title="2020-10-02 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,968,173</td>
+		<td class="view-total">113,259,693,950</td>
+		<td class="res-total">5,880,071,567</td>
+	</tr>
+	<tr id="d2020100214" class="we me">
+		<td class="hour" title="2020-10-02 14:00:00">14時</td>
+		<td class="video-total-diff">180</td>
+		<td class="view-total-diff down">-4,631,403</td>
+		<td class="res-total-diff">30,005</td>
+		<td class="video-total">17,968,173</td>
+		<td class="view-total">113,259,693,950</td>
+		<td class="res-total">5,880,071,567</td>
+	</tr>
+	<tr id="d2020100213" class="we me">
+		<td class="hour" title="2020-10-02 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,993</td>
+		<td class="view-total">113,264,325,353</td>
+		<td class="res-total">5,880,041,562</td>
+	</tr>
+	<tr id="d2020100212" class="we me">
+		<td class="hour" title="2020-10-02 12:00:00">12時</td>
+		<td class="video-total-diff">205</td>
+		<td class="view-total-diff">761,924</td>
+		<td class="res-total-diff">25,958</td>
+		<td class="video-total">17,967,993</td>
+		<td class="view-total">113,264,325,353</td>
+		<td class="res-total">5,880,041,562</td>
+	</tr>
+	<tr id="d2020100211" class="we me">
+		<td class="hour" title="2020-10-02 11:00:00">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,788</td>
+		<td class="view-total">113,263,563,429</td>
+		<td class="res-total">5,880,015,604</td>
+	</tr>
+	<tr id="d2020100210" class="we me">
+		<td class="hour" title="2020-10-02 10:00:01">10時</td>
+		<td class="video-total-diff">108</td>
+		<td class="view-total-diff">1,246,496</td>
+		<td class="res-total-diff">24,104</td>
+		<td class="video-total">17,967,788</td>
+		<td class="view-total">113,263,563,429</td>
+		<td class="res-total">5,880,015,604</td>
+	</tr>
+	<tr id="d2020100209" class="we me">
+		<td class="hour" title="2020-10-02 09:00:00">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,680</td>
+		<td class="view-total">113,262,316,933</td>
+		<td class="res-total">5,879,991,500</td>
+	</tr>
+	<tr id="d2020100208" class="we me">
+		<td class="hour" title="2020-10-02 08:00:00">8時</td>
+		<td class="video-total-diff">35</td>
+		<td class="view-total-diff">692,950</td>
+		<td class="res-total-diff">17,058</td>
+		<td class="video-total">17,967,680</td>
+		<td class="view-total">113,262,316,933</td>
+		<td class="res-total">5,879,991,500</td>
+	</tr>
+	<tr id="d2020100207" class="we me">
+		<td class="hour" title="2020-10-02 07:00:00">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,645</td>
+		<td class="view-total">113,261,623,983</td>
+		<td class="res-total">5,879,974,442</td>
+	</tr>
+	<tr id="d2020100206" class="we me">
+		<td class="hour" title="2020-10-02 06:00:00">6時</td>
+		<td class="video-total-diff">59</td>
+		<td class="view-total-diff down">-1,538,248</td>
+		<td class="res-total-diff">14,770</td>
+		<td class="video-total">17,967,645</td>
+		<td class="view-total">113,261,623,983</td>
+		<td class="res-total">5,879,974,442</td>
+	</tr>
+	<tr id="d2020100205" class="we me">
+		<td class="hour" title="2020-10-02 05:00:01">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,586</td>
+		<td class="view-total">113,263,162,231</td>
+		<td class="res-total">5,879,959,672</td>
+	</tr>
+	<tr id="d2020100204" class="we me">
+		<td class="hour" title="2020-10-02 04:00:00">4時</td>
+		<td class="video-total-diff">169</td>
+		<td class="view-total-diff">1,519,515</td>
+		<td class="res-total-diff">27,906</td>
+		<td class="video-total">17,967,586</td>
+		<td class="view-total">113,263,162,231</td>
+		<td class="res-total">5,879,959,672</td>
+	</tr>
+	<tr id="d2020100203" class="we me">
+		<td class="hour" title="2020-10-02 03:00:00">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,417</td>
+		<td class="view-total">113,261,642,716</td>
+		<td class="res-total">5,879,931,766</td>
+	</tr>
+	<tr id="d2020100202" class="we me">
+		<td class="hour" title="2020-10-02 02:00:00">2時</td>
+		<td class="video-total-diff">371</td>
+		<td class="view-total-diff">2,304,915</td>
+		<td class="res-total-diff">47,856</td>
+		<td class="video-total">17,967,417</td>
+		<td class="view-total">113,261,642,716</td>
+		<td class="res-total">5,879,931,766</td>
+	</tr>
+	<tr id="d2020100201" class="we me">
+		<td class="hour" title="2020-10-02 01:00:01">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,967,046</td>
+		<td class="view-total">113,259,337,801</td>
+		<td class="res-total">5,879,883,910</td>
+	</tr>
+	<tr id="d2020100200" class="we me">
+		<td class="hour" title="2020-10-02 00:00:00">0時</td>
+		<td class="video-total-diff">388</td>
+		<td class="view-total-diff">1,986,678</td>
+		<td class="res-total-diff">68,101</td>
+		<td class="video-total">17,967,046</td>
+		<td class="view-total">113,259,337,801</td>
+		<td class="res-total">5,879,883,910</td>
+	</tr>
+	<tr id="d2020100123" class="we mo">
+		<td class="date" id="d01" rowspan="24">2020年10月01日(<span class="thu">木</span>)</td>
+		<td class="hour" title="2020-10-01 23:00:00">23時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,658</td>
+		<td class="view-total">113,257,351,123</td>
+		<td class="res-total">5,879,815,809</td>
+	</tr>
+	<tr id="d2020100122" class="we mo">
+		<td class="hour" title="2020-10-01 22:00:00">22時</td>
+		<td class="video-total-diff">615</td>
+		<td class="view-total-diff">1,794,414</td>
+		<td class="res-total-diff">72,291</td>
+		<td class="video-total">17,966,658</td>
+		<td class="view-total">113,257,351,123</td>
+		<td class="res-total">5,879,815,809</td>
+	</tr>
+	<tr id="d2020100121" class="we mo">
+		<td class="hour" title="2020-10-01 21:00:00">21時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,043</td>
+		<td class="view-total">113,255,556,709</td>
+		<td class="res-total">5,879,743,518</td>
+	</tr>
+	<tr id="d2020100120" class="we mo">
+		<td class="hour" title="2020-10-01 20:00:01">20時</td>
+		<td class="video-total-diff">136</td>
+		<td class="view-total-diff">1,605,979</td>
+		<td class="res-total-diff">49,053</td>
+		<td class="video-total">17,966,043</td>
+		<td class="view-total">113,255,556,709</td>
+		<td class="res-total">5,879,743,518</td>
+	</tr>
+	<tr id="d2020100119" class="we mo">
+		<td class="hour" title="2020-10-01 19:00:02">19時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,965,907</td>
+		<td class="view-total">113,253,950,730</td>
+		<td class="res-total">5,879,694,465</td>
+	</tr>
+	<tr id="d2020100118" class="we mo">
+		<td class="hour" title="2020-10-01 18:00:01">18時</td>
+		<td class="video-total-diff down">-246</td>
+		<td class="view-total-diff">1,658,510</td>
+		<td class="res-total-diff">32,343</td>
+		<td class="video-total">17,965,907</td>
+		<td class="view-total">113,253,950,730</td>
+		<td class="res-total">5,879,694,465</td>
+	</tr>
+	<tr id="d2020100117" class="we mo">
+		<td class="hour" title="2020-10-01 17:00:01">17時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,153</td>
+		<td class="view-total">113,252,292,220</td>
+		<td class="res-total">5,879,662,122</td>
+	</tr>
+	<tr id="d2020100116" class="we mo">
+		<td class="hour" title="2020-10-01 16:00:00">16時</td>
+		<td class="video-total-diff down">-118</td>
+		<td class="view-total-diff down">-665,249</td>
+		<td class="res-total-diff">26,869</td>
+		<td class="video-total">17,966,153</td>
+		<td class="view-total">113,252,292,220</td>
+		<td class="res-total">5,879,662,122</td>
+	</tr>
+	<tr id="d2020100115" class="we mo">
+		<td class="hour" title="2020-10-01 15:00:00">15時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,271</td>
+		<td class="view-total">113,252,957,469</td>
+		<td class="res-total">5,879,635,253</td>
+	</tr>
+	<tr id="d2020100114" class="we mo">
+		<td class="hour" title="2020-10-01 14:00:00">14時</td>
+		<td class="video-total-diff">29</td>
+		<td class="view-total-diff">25,971,839</td>
+		<td class="res-total-diff">28,000</td>
+		<td class="video-total">17,966,271</td>
+		<td class="view-total">113,252,957,469</td>
+		<td class="res-total">5,879,635,253</td>
+	</tr>
+	<tr id="d2020100113" class="we mo">
+		<td class="hour" title="2020-10-01 13:00:00">13時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,242</td>
+		<td class="view-total">113,226,985,630</td>
+		<td class="res-total">5,879,607,253</td>
+	</tr>
+	<tr id="d2020100112" class="we mo">
+		<td class="hour" title="2020-10-01 12:00:00">12時</td>
+		<td class="video-total-diff">108</td>
+		<td class="view-total-diff">1,556,906</td>
+		<td class="res-total-diff">27,133</td>
+		<td class="video-total">17,966,242</td>
+		<td class="view-total">113,226,985,630</td>
+		<td class="res-total">5,879,607,253</td>
+	</tr>
+	<tr id="d2020100111" class="we mo">
+		<td class="hour" title="2020-10-01 11:00:00">11時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,134</td>
+		<td class="view-total">113,225,428,724</td>
+		<td class="res-total">5,879,580,120</td>
+	</tr>
+	<tr id="d2020100110" class="we mo">
+		<td class="hour" title="2020-10-01 10:00:00">10時</td>
+		<td class="video-total-diff down">-4</td>
+		<td class="view-total-diff down">-3,077,611</td>
+		<td class="res-total-diff">18,199</td>
+		<td class="video-total">17,966,134</td>
+		<td class="view-total">113,225,428,724</td>
+		<td class="res-total">5,879,580,120</td>
+	</tr>
+	<tr id="d2020100109" class="we mo">
+		<td class="hour" title="2020-10-01 09:00:01">9時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,138</td>
+		<td class="view-total">113,228,506,335</td>
+		<td class="res-total">5,879,561,921</td>
+	</tr>
+	<tr id="d2020100108" class="we mo">
+		<td class="hour" title="2020-10-01 08:00:01">8時</td>
+		<td class="video-total-diff">42</td>
+		<td class="view-total-diff">677,078</td>
+		<td class="res-total-diff">14,070</td>
+		<td class="video-total">17,966,138</td>
+		<td class="view-total">113,228,506,335</td>
+		<td class="res-total">5,879,561,921</td>
+	</tr>
+	<tr id="d2020100107" class="we mo">
+		<td class="hour" title="2020-10-01 07:00:01">7時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,096</td>
+		<td class="view-total">113,227,829,257</td>
+		<td class="res-total">5,879,547,851</td>
+	</tr>
+	<tr id="d2020100106" class="we mo">
+		<td class="hour" title="2020-10-01 06:00:00">6時</td>
+		<td class="video-total-diff">65</td>
+		<td class="view-total-diff down">-1,972,902</td>
+		<td class="res-total-diff">13,825</td>
+		<td class="video-total">17,966,096</td>
+		<td class="view-total">113,227,829,257</td>
+		<td class="res-total">5,879,547,851</td>
+	</tr>
+	<tr id="d2020100105" class="we mo">
+		<td class="hour" title="2020-10-01 05:00:00">5時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,031</td>
+		<td class="view-total">113,229,802,159</td>
+		<td class="res-total">5,879,534,026</td>
+	</tr>
+	<tr id="d2020100104" class="we mo">
+		<td class="hour" title="2020-10-01 04:00:00">4時</td>
+		<td class="video-total-diff down">-187</td>
+		<td class="view-total-diff">1,191,220</td>
+		<td class="res-total-diff">33,184</td>
+		<td class="video-total">17,966,031</td>
+		<td class="view-total">113,229,802,159</td>
+		<td class="res-total">5,879,534,026</td>
+	</tr>
+	<tr id="d2020100103" class="we mo">
+		<td class="hour" title="2020-10-01 03:00:00">3時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,218</td>
+		<td class="view-total">113,228,610,939</td>
+		<td class="res-total">5,879,500,842</td>
+	</tr>
+	<tr id="d2020100102" class="we mo">
+		<td class="hour" title="2020-10-01 02:00:00">2時</td>
+		<td class="video-total-diff">180</td>
+		<td class="view-total-diff">1,545,791</td>
+		<td class="res-total-diff">64,368</td>
+		<td class="video-total">17,966,218</td>
+		<td class="view-total">113,228,610,939</td>
+		<td class="res-total">5,879,500,842</td>
+	</tr>
+	<tr id="d2020100101" class="we mo">
+		<td class="hour" title="2020-10-01 01:00:00">1時</td>
+		<td class="video-total-diff">0</td>
+		<td class="view-total-diff">0</td>
+		<td class="res-total-diff">0</td>
+		<td class="video-total">17,966,038</td>
+		<td class="view-total">113,227,065,148</td>
+		<td class="res-total">5,879,436,474</td>
+	</tr>
+	<tr id="d2020100100" class="we mo">
+		<td class="hour" title="2020-10-01 00:00:00">0時</td>
+		<td class="video-total-diff">293</td>
+		<td class="view-total-diff">1,779,906</td>
+		<td class="res-total-diff">80,626</td>
+		<td class="video-total">17,966,038</td>
+		<td class="view-total">113,227,065,148</td>
+		<td class="res-total">5,879,436,474</td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+<div class="calendar-option">
+	<ul class="option-menu">
+	<li class="year"><ul>
+		<li><a href="total/200710">2007年</a></li>
+		<li><a href="total/200810">2008年</a></li>
+		<li><a href="total/200910">2009年</a></li>
+		<li><a href="total/201010">2010年</a></li>
+		<li><a href="total/201110">2011年</a></li>
+		<li><a href="total/201210">2012年</a></li>
+		<li><a href="total/201310">2013年</a></li>
+		<li><a href="total/201410">2014年</a></li>
+		<li><a href="total/201510">2015年</a></li>
+		<li><a href="total/201610">2016年</a></li>
+		<li><a href="total/201710">2017年</a></li>
+		<li><a href="total/201810">2018年</a></li>
+		<li><a href="total/201910">2019年</a></li>
+		<li><em>2020年</em></li>
+	</ul></li>
+	<li class="month"><ul>
+		<li><a href="total/202009">&lt; 前の月</a></li>
+		<li><a href="total/202001">01月</a></li>
+		<li><a href="total/202002">02月</a></li>
+		<li><a href="total/202003">03月</a></li>
+		<li><a href="total/202004">04月</a></li>
+		<li><a href="total/202005">05月</a></li>
+		<li><a href="total/202006">06月</a></li>
+		<li><a href="total/202007">07月</a></li>
+		<li><a href="total/202008">08月</a></li>
+		<li><a href="total/202009">09月</a></li>
+		<li><em>10月</em></li>
+		<li><span class="nothing">11月</span></li>
+		<li><span class="nothing">12月</span></li>
+		<li><span class="nothing">次の月 &gt;</span></li>
+	</ul></li>
+	</ul>
+</div>
+<div id="download">
+	<h2>データファイル</h2>
+<div class="tsv">
+	<h3>TSV</h3>
+	<p>
+		<a href="total/202010.tsv" class="download" rel="nofollow">202010.tsv</a><br />
+			タブ区切り形式で提供するこのページのデータです。<br />
+			左から [日付] [時] [取得エポック秒] [総動画数] [総再生数] [総コメント数] のカラムになります。<br />
+	</p>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-nav">
+	<h2>ナビゲーション</h2>
+	<ul>
+		<li><a href="http://www.nicochart.jp/">トップページ</a></li>
+		<li><a href="http://www.nicochart.jp/archive/">過去のランキング</a><ul>
+			<li><a href="http://www.nicochart.jp/ranking/">デイリーランキング</a></li>
+			<li><a href="http://www.nicochart.jp/ranking/total">合計ランキング</a></li>
+			<li><a href="http://www.nicochart.jp/top3/">トップチャート</a></li>
+			<li><a href="http://www.nicochart.jp/matrix/">グループマトリクス</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/now/">現在のランキング</a><ul>
+			<li><a href="http://now.nicochart.jp/today/">本日</a> … 積立式デイリーランキング</li>
+			<li><a href="http://now.nicochart.jp/hourly/">毎時</a> … 毎時ランキング</li>
+			<li><a href="http://now.nicochart.jp/newarrival/">新着</a> … 新着動画ランキング</li>
+			<li><a href="http://now.nicochart.jp/latest/">24時間</a> … 最新24時間ランキング</li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/other/">その他のランキング</a><ul>
+			<li><a href="http://www.nicochart.jp/stamp_ranking/">スタンプランキング</a></li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/service/">データサービス</a></li>
+		<li><a href="http://www.nicochart.jp/about/">このサイトについて</a></li>
+	</ul>
+</div>
+<div id="footer-form">
+	<form action="http://www.nicochart.jp/redirect" method="get">
+	<h2>動画情報検索</h2>
+	<ul>
+		<li class="radio-s"><input type="radio" class="radio" name="mode" value="s" id="footer-form-s" checked="checked" /><label for="footer-form-s">キーワード検索</label></li>
+		<li class="radio-u"><input type="radio" class="radio" name="mode" value="u" id="footer-form-u" /><label for="footer-form-u">ユーザーID検索</label></li>
+		<li class="radio-t"><input type="radio" class="radio" name="mode" value="t" id="footer-form-t" /><label for="footer-form-t">タグ検索</label></li>
+		<li class="radio-rt"><input type="radio" class="radio" name="mode" value="related_tag" id="footer-form-rt" /><label for="footer-form-rt">含むタグ検索</label></li>
+		<li class="radio-n"><input type="radio" class="radio" name="mode" value="n" id="footer-form-n" /><label for="footer-form-n">ニックネーム検索</label></li>
+		<li class="radio-rn"><input type="radio" class="radio" name="mode" value="related_name" id="footer-form-rn" /><label for="footer-form-rn">含むニックネーム検索</label></li>
+		<li class="radio-r"><input type="radio" class="radio" name="mode" value="r" id="footer-form-r" /><label for="footer-form-r">権利名検索</label></li>
+		<li class="radio-rr"><input type="radio" class="radio" name="mode" value="related_right" id="footer-form-rr" /><label for="footer-form-rr">含む権利名検索</label></li>
+	</ul>
+	<p>
+		<input type="text" class="text" name="path" value="" />
+		<input type="submit" class="button" value="検索" />
+	</p>
+	</form>
+<div id="footer-info">
+	<h2>市場ランキング</h2>
+	<noscript><p>JavaScriptを有効にして下さい</p></noscript>
+</div>
+</div>
+<div id="niconico-series">
+	<h2>公式サイトへのリンク</h2>
+	<ul class="nicovideo-link">
+		<li><a href="https://www.nicovideo.jp/" class="top">niconico</a><ul>
+			<li><a href="https://www.nicovideo.jp/video_top/" class="top">動画</a> &gt; <a href="https://www.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="https://seiga.nicovideo.jp/" class="top">静画</a> &gt; <a href="https://seiga.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="http://live.nicovideo.jp/" class="top">生放送</a> &gt; <a href="http://live.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="http://jk.nicovideo.jp/" class="top">実況</a></li>
+			<li><a href="https://ch.nicovideo.jp/" class="top">チャンネル</a> &gt; <a href="https://ch.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="https://com.nicovideo.jp/" class="top">コミュニティ</a></li>
+			<li><a href="https://dic.nicovideo.jp/" class="top">大百科</a></li>
+			<li><a href="https://3d.nicovideo.jp/" class="top">立体</a> &gt; <a href="https://3d.nicovideo.jp/rankings/original/daily" class="ranking">ランキング</a></li>
+			<li><a href="https://commons.nicovideo.jp/" class="top">コモンズ</a> &gt; <a href="https://commons.nicovideo.jp/ranking/" class="ranking">ランキング</a></li>
+			<li><a href="https://ichiba.nicovideo.jp/" class="top">市場</a> &gt; <a href="https://ichiba.nicovideo.jp/ranking/" class="ranking">ランキング</a></li>
+			<li><a href="http://app.nicovideo.jp/" class="top">アプリ</a></li>
+			<li><a href="https://news.nicovideo.jp/" class="top">ニュース</a> &gt; <a href="https://news.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+		</ul></li>
+	</ul>
+</div>
+<div id="nicovideo-shortcut">
+	<h2>ニコニコ動画ショートカット</h2>
+	<ul class="nicovideo-link">
+		<li><a href="https://www.nicovideo.jp/my" rel="nofollow">マイページ</a></li>
+		<li><a href="https://www.upload.nicovideo.jp/upload" rel="nofollow">動画を投稿</a></li>
+		<li><a href="https://www.nicovideo.jp/my/history" rel="nofollow">視聴履歴</a></li>
+		<li><a href="https://www.nicovideo.jp/newarrival">新着動画</a></li>
+		<li><a href="https://www.nicovideo.jp/ranking">ランキング</a></li>
+	</ul>
+</div>
+	<address id="copyright">Copyright &copy; 2007-2020 <a href="http://www.nicochart.jp/">nicochart</a> ( <a href="https://twitter.com/nicochart_jp" class="other-site twitter">@nicochart_jp</a> ) all rights reserved.</address>
+</div>
+</div>
+<div id="inner-link"></div>
+<div id="pageinfo">
+<ul>
+	<li id="cpu">static</li>
+	<li id="lastupdate"></li>
+	<li id="clock"></li>
+	<li id="signal"><img src="http://res.nicochart.jp/img/signal_0.gif" alt="" /></li>
+	<li id="economy"><img src="http://res.nicochart.jp/img/economy_0.gif" alt="" /></li>
+	<li id="upload"><a href="https://www.upload.nicovideo.jp/upload" class="nicovideo-link"><img src="http://res.nicochart.jp/img/upload_0.gif" alt="" /></a></li>
+	<li id="migiue"><a href="http://res.nicochart.jp/webclap" title="[ WEB拍手 ]  右上のコメントはこちらから投稿できます。"><img src="http://res.nicochart.jp/img/migiue.gif" alt="WEB拍手" /></a></li>
+</ul>
+</div>
+<script type="text/javascript">
+bootApp();
+</script>
+</body>
+</html>

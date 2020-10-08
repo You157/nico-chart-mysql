@@ -1,0 +1,2138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2618731-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments)}
+	gtag('js', new Date());
+	gtag('config', 'UA-2618731-1');
+</script>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="ja" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="x-ua-compatible" content="chrome=1" />
+	<meta http-equiv="expires" content="3600" />
+	<meta name="keywords" content="データサービス,総合カウント" />
+	<base href="http://www.nicochart.jp/" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="http://res.nicochart.jp/favicon.ico" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="http://res.nicochart.jp/favicon.ico" />
+	<link rel="apple-touch-icon" href="http://res.nicochart.jp/img/icon.png" />
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.5.1/build/cssreset/cssreset-min.css" />
+	<link rel="stylesheet" type="text/css" href="http://res.nicochart.jp/static/common.min.css?20201001" />
+<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://res.nicochart.jp/static/ie.min.css?20201001" />
+<![endif]-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://res.nicochart.jp/static/common.min.js?20201001"></script>
+<!--[if lt IE 7]>
+	<script type="text/javascript" src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+<![endif]-->
+	<title>総合カウント - ニコニコチャート</title>
+</head>
+<body id="top" class="service total">
+<div id="wrapper">
+<div id="header">
+	<p id="logo"><a href="http://www.nicochart.jp/"><img src="http://res.nicochart.jp/img/logo.gif" alt="ニコニコチャート ニコニコ動画のランキングデータベース" /></a></p>
+	<form id="header-form" action="http://www.nicochart.jp/redirect" method="get">
+	<ul>
+		<li><input type="radio" class="radio" name="mode" value="s" id="header-form-s" checked="checked" /><label for="header-form-s">キーワード</label></li>
+		<li><input type="radio" class="radio" name="mode" value="t" id="header-form-t" /><label for="header-form-t">タグ</label></li>
+		<li><input type="radio" class="radio" name="mode" value="n" id="header-form-n" /><label for="header-form-n">ニックネーム</label></li>
+		<li><input type="radio" class="radio" name="mode" value="r" id="header-form-r" /><label for="header-form-r">権利名</label></li>
+		<li><input type="radio" class="radio" name="mode" value="u" id="header-form-u" /><label for="header-form-u">ユーザーID</label></li>
+	</ul>
+	<p>
+		<input type="text" class="text" name="path" value="" />
+		<input type="submit" class="button" value="検索" />
+	</p>
+	</form>
+	<ul id="ranking-link">
+		<li class="seiga"><a href="https://seiga.nicovideo.jp/illust/ranking/point/hourly/">ニコニコ静画<br />毎時ランキング</a></li>
+		<li class="video"><a href="https://www.nicovideo.jp/ranking/genre/all?term=hour">ニコニコ動画<br />毎時ランキング</a></li>
+	</ul>
+</div>
+<ul id="header-nav">
+	<li class="nav-index"><a href="http://www.nicochart.jp/">トップページ</a></li>
+	<li class="nav-archive"><a href="http://www.nicochart.jp/archive/">過去のランキング</a><ul>
+		<li><a href="http://www.nicochart.jp/ranking/">デイリーランキング</a></li>
+		<li><a href="http://www.nicochart.jp/ranking/total">合計ランキング</a></li>
+		<li><a href="http://www.nicochart.jp/top3/">トップチャート</a><ul>
+			<li><a href="http://www.nicochart.jp/top3/">デイリー</a></li>
+			<li><a href="http://www.nicochart.jp/top3/total">合計</a></li>
+			<li><a href="http://www.nicochart.jp/top3/weekly">週間</a></li>
+			<li><a href="http://www.nicochart.jp/top3/monthly">月間</a></li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/matrix/">グループマトリクス</a></li>
+	</ul></li>
+	<li class="nav-now"><a href="http://now.nicochart.jp/now/">現在のランキング</a><ul>
+		<li><a href="http://now.nicochart.jp/today/">本日</a><ul>
+			<li><a href="http://now.nicochart.jp/today/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/today/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/today/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/today/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/hourly/">毎時</a><ul>
+			<li><a href="http://now.nicochart.jp/hourly/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/hourly/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/newarrival/">新着</a><ul>
+			<li><a href="http://now.nicochart.jp/newarrival/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/newarrival/mylist">マイリスト</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/latest/">24時間</a><ul>
+			<li><a href="http://now.nicochart.jp/latest/">総合</a></li>
+			<li><a href="http://now.nicochart.jp/latest/view">再生</a></li>
+			<li><a href="http://now.nicochart.jp/latest/res">コメント</a></li>
+			<li><a href="http://now.nicochart.jp/latest/mylist">マイリスト</a></li>
+		</ul></li>
+	</ul></li>
+	<li class="nav-other"><a href="http://www.nicochart.jp/other/">その他のランキング</a><ul>
+		<li><a href="http://www.nicochart.jp/stamp_ranking/">スタンプランキング</a></li>
+	</ul></li>
+	<li class="nav-service"><a href="http://www.nicochart.jp/service/">データサービス</a><ul>
+		<li><a href="http://www.nicochart.jp/service/video">動画情報</a></li>
+		<li><a href="http://www.nicochart.jp/service/list">リスト情報</a></li>
+		<li><a href="http://www.nicochart.jp/total/">総合カウント</a></li>
+		<li><a href="http://www.nicochart.jp/major_tag/">人気のタグ</a></li>
+		<li><a href="http://www.nicochart.jp/service/#other-service">その他のデータ</a></li>
+	</ul></li>
+	<li class="nav-about"><a href="http://www.nicochart.jp/about/">このサイトについて</a><ul>
+		<li><a href="http://www.nicochart.jp/about/status">サイトステータス</a></li>
+		<li><a href="http://www.nicochart.jp/about/accident">ランキング事故</a></li>
+		<li><a href="http://www.nicochart.jp/about/mylist">ピックアップマイリスト</a></li>
+		<li><a href="http://www.nicochart.jp/about/major/">数の多い順リスト</a><ul>
+			<li><a href="http://www.nicochart.jp/about/major/tag">タグ</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/name">ニックネーム</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/right">権利名</a></li>
+			<li><a href="http://www.nicochart.jp/about/major/user">ユーザーID</a></li>
+		</ul></li>
+		<li><a href="http://res.nicochart.jp/webclap">WEB拍手</a></li>
+		<li><a href="http://www.nicochart.jp/blog/">管理者ブログ</a></li>
+	</ul></li>
+</ul>
+<ol id="topic-path">
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.nicochart.jp/" itemprop="url"><span itemprop="title">トップ</span></a></li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="service/" itemprop="url"><span itemprop="title">データサービス</span></a></li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">総合カウント</span></li>
+</ol>
+<div id="article">
+	<h1>総合カウント</h1>
+	<p>
+		総動画数・総再生数・総コメント数の1日ごとの記録です。<br />
+		月別のページでは1時間ごとの記録を見ることができます。<br />
+	</p>
+	<h2>最近のデータ</h2>
+<div class="calendar-option">
+	<ul class="option-menu">
+	<li class="year"><ul>
+		<li><a href="total/200710">2007年</a></li>
+		<li><a href="total/200810">2008年</a></li>
+		<li><a href="total/200910">2009年</a></li>
+		<li><a href="total/201010">2010年</a></li>
+		<li><a href="total/201110">2011年</a></li>
+		<li><a href="total/201210">2012年</a></li>
+		<li><a href="total/201310">2013年</a></li>
+		<li><a href="total/201410">2014年</a></li>
+		<li><a href="total/201510">2015年</a></li>
+		<li><a href="total/201610">2016年</a></li>
+		<li><a href="total/201710">2017年</a></li>
+		<li><a href="total/201810">2018年</a></li>
+		<li><a href="total/201910">2019年</a></li>
+		<li><em>2020年</em></li>
+	</ul></li>
+	<li class="month"><ul>
+		<li><a href="total/202001">01月</a></li>
+		<li><a href="total/202002">02月</a></li>
+		<li><a href="total/202003">03月</a></li>
+		<li><a href="total/202004">04月</a></li>
+		<li><a href="total/202005">05月</a></li>
+		<li><a href="total/202006">06月</a></li>
+		<li><a href="total/202007">07月</a></li>
+		<li><a href="total/202008">08月</a></li>
+		<li><a href="total/202009">09月</a></li>
+		<li><a href="total/202010">10月</a></li>
+		<li><span class="nothing">11月</span></li>
+		<li><span class="nothing">12月</span></li>
+	</ul></li>
+	</ul>
+</div>
+<div id="total-table">
+	<table>
+	<caption>デイリーデータ</caption>
+	<thead>
+	<tr class="first">
+		<th class="date" rowspan="2">日付</th>
+		<th class="hour" rowspan="2">時</th>
+		<th colspan="3">前日差分</th>
+		<th colspan="3">合計</th>
+	</tr>
+	<tr class="second">
+		<th class="video-total-diff">動画数</th>
+		<th class="view-total-diff">再生数</th>
+		<th class="res-total-diff">コメント数</th>
+		<th class="video-total">総動画数</th>
+		<th class="view-total">総再生数</th>
+		<th class="res-total">総コメント数</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr id="d2020100705" class="wo me">
+		<td class="date" id="d20201007"><a href="total/202010#d07">2020年10月07日(<span class="wed">水</span>)</a></td>
+		<td class="hour lag" title="2020-10-07 05:00:00">5時</td>
+		<td class="video-total-diff">2,487</td>
+		<td class="view-total-diff">17,744,834</td>
+		<td class="res-total-diff">408,585</td>
+		<td class="video-total">17,983,006</td>
+		<td class="view-total">113,343,654,341</td>
+		<td class="res-total">5,882,486,478</td>
+	</tr>
+	<tr id="d2020100606" class="wo me">
+		<td class="date" id="d20201006"><a href="total/202010#d06">2020年10月06日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-10-06 06:00:00">6時</td>
+		<td class="video-total-diff">2,238</td>
+		<td class="view-total-diff">15,827,828</td>
+		<td class="res-total-diff">489,743</td>
+		<td class="video-total">17,980,519</td>
+		<td class="view-total">113,325,909,507</td>
+		<td class="res-total">5,882,077,893</td>
+	</tr>
+	<tr id="d2020100506" class="we me">
+		<td class="date" id="d20201005"><a href="total/202010#d05">2020年10月05日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-10-05 06:00:00">6時</td>
+		<td class="video-total-diff">3,647</td>
+		<td class="view-total-diff">21,678,700</td>
+		<td class="res-total-diff">584,471</td>
+		<td class="video-total">17,978,281</td>
+		<td class="view-total">113,310,081,679</td>
+		<td class="res-total">5,881,588,150</td>
+	</tr>
+	<tr id="d2020100406" class="we me">
+		<td class="date" id="d20201004"><a href="total/202010#d04">2020年10月04日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-10-04 06:00:00">6時</td>
+		<td class="video-total-diff">3,942</td>
+		<td class="view-total-diff">21,035,080</td>
+		<td class="res-total-diff">539,222</td>
+		<td class="video-total">17,974,634</td>
+		<td class="view-total">113,288,402,979</td>
+		<td class="res-total">5,881,003,679</td>
+	</tr>
+	<tr id="d2020100306" class="we me">
+		<td class="date" id="d20201003"><a href="total/202010#d03">2020年10月03日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-10-03 06:00:00">6時</td>
+		<td class="video-total-diff">3,047</td>
+		<td class="view-total-diff">5,743,916</td>
+		<td class="res-total-diff">490,015</td>
+		<td class="video-total">17,970,692</td>
+		<td class="view-total">113,267,367,899</td>
+		<td class="res-total">5,880,464,457</td>
+	</tr>
+	<tr id="d2020100206" class="we me">
+		<td class="date" id="d20201002"><a href="total/202010#d02">2020年10月02日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-10-02 06:00:00">6時</td>
+		<td class="video-total-diff">1,549</td>
+		<td class="view-total-diff">33,794,726</td>
+		<td class="res-total-diff">426,591</td>
+		<td class="video-total">17,967,645</td>
+		<td class="view-total">113,261,623,983</td>
+		<td class="res-total">5,879,974,442</td>
+	</tr>
+	<tr id="d2020100106" class="we mo">
+		<td class="date" id="d20201001"><a href="total/202010#d01">2020年10月01日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-10-01 06:00:00">6時</td>
+		<td class="video-total-diff">1,369</td>
+		<td class="view-total-diff down">-6,949,189</td>
+		<td class="res-total-diff">430,730</td>
+		<td class="video-total">17,966,096</td>
+		<td class="view-total">113,227,829,257</td>
+		<td class="res-total">5,879,547,851</td>
+	</tr>
+	<tr id="d2020093006" class="we mo">
+		<td class="date" id="d20200930"><a href="total/202009#d30">2020年09月30日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-09-30 06:00:00">6時</td>
+		<td class="video-total-diff">2,466</td>
+		<td class="view-total-diff">17,528,791</td>
+		<td class="res-total-diff">416,005</td>
+		<td class="video-total">17,964,727</td>
+		<td class="view-total">113,234,778,446</td>
+		<td class="res-total">5,879,117,121</td>
+	</tr>
+	<tr id="d2020092906" class="we mo">
+		<td class="date" id="d20200929"><a href="total/202009#d29">2020年09月29日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-09-29 06:00:00">6時</td>
+		<td class="video-total-diff">1,749</td>
+		<td class="view-total-diff">15,147,282</td>
+		<td class="res-total-diff">434,779</td>
+		<td class="video-total">17,962,261</td>
+		<td class="view-total">113,217,249,655</td>
+		<td class="res-total">5,878,701,116</td>
+	</tr>
+	<tr id="d2020092806" class="wo mo">
+		<td class="date" id="d20200928"><a href="total/202009#d28">2020年09月28日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-09-28 06:00:00">6時</td>
+		<td class="video-total-diff">3,761</td>
+		<td class="view-total-diff">23,795,823</td>
+		<td class="res-total-diff">617,524</td>
+		<td class="video-total">17,960,512</td>
+		<td class="view-total">113,202,102,373</td>
+		<td class="res-total">5,878,266,337</td>
+	</tr>
+	<tr id="d2020092706" class="wo mo">
+		<td class="date" id="d20200927"><a href="total/202009#d27">2020年09月27日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-09-27 06:00:00">6時</td>
+		<td class="video-total-diff">3,634</td>
+		<td class="view-total-diff">22,728,065</td>
+		<td class="res-total-diff">561,033</td>
+		<td class="video-total">17,956,751</td>
+		<td class="view-total">113,178,306,550</td>
+		<td class="res-total">5,877,648,813</td>
+	</tr>
+	<tr id="d2020092606" class="wo mo">
+		<td class="date" id="d20200926"><a href="total/202009#d26">2020年09月26日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-09-26 06:00:00">6時</td>
+		<td class="video-total-diff">3,421</td>
+		<td class="view-total-diff">12,321,587</td>
+		<td class="res-total-diff">450,982</td>
+		<td class="video-total">17,953,117</td>
+		<td class="view-total">113,155,578,485</td>
+		<td class="res-total">5,877,087,780</td>
+	</tr>
+	<tr id="d2020092506" class="wo mo">
+		<td class="date" id="d20200925"><a href="total/202009#d25">2020年09月25日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-09-25 06:00:00">6時</td>
+		<td class="video-total-diff">2,872</td>
+		<td class="view-total-diff down">-8,662,893</td>
+		<td class="res-total-diff">422,438</td>
+		<td class="video-total">17,949,696</td>
+		<td class="view-total">113,143,256,898</td>
+		<td class="res-total">5,876,636,798</td>
+	</tr>
+	<tr id="d2020092406" class="wo mo">
+		<td class="date" id="d20200924"><a href="total/202009#d24">2020年09月24日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-09-24 06:00:00">6時</td>
+		<td class="video-total-diff">2,156</td>
+		<td class="view-total-diff">15,420,579</td>
+		<td class="res-total-diff">458,918</td>
+		<td class="video-total">17,946,824</td>
+		<td class="view-total">113,151,919,791</td>
+		<td class="res-total">5,876,214,360</td>
+	</tr>
+	<tr id="d2020092306" class="wo mo">
+		<td class="date" id="d20200923"><a href="total/202009#d23">2020年09月23日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-09-23 06:00:00">6時</td>
+		<td class="video-total-diff">3,537</td>
+		<td class="view-total-diff">17,437,007</td>
+		<td class="res-total-diff">576,271</td>
+		<td class="video-total">17,944,668</td>
+		<td class="view-total">113,136,499,212</td>
+		<td class="res-total">5,875,755,442</td>
+	</tr>
+	<tr id="d2020092206" class="wo mo">
+		<td class="date" id="d20200922"><a href="total/202009#d22">2020年09月22日(<span class="tue holiday" title="秋分の日">火</span>)</a></td>
+		<td class="hour" title="2020-09-22 06:00:01">6時</td>
+		<td class="video-total-diff">3,585</td>
+		<td class="view-total-diff">22,337,561</td>
+		<td class="res-total-diff">591,564</td>
+		<td class="video-total">17,941,131</td>
+		<td class="view-total">113,119,062,205</td>
+		<td class="res-total">5,875,179,171</td>
+	</tr>
+	<tr id="d2020092106" class="we mo">
+		<td class="date" id="d20200921"><a href="total/202009#d21">2020年09月21日(<span class="mon holiday" title="敬老の日">月</span>)</a></td>
+		<td class="hour" title="2020-09-21 06:00:00">6時</td>
+		<td class="video-total-diff">3,874</td>
+		<td class="view-total-diff">22,015,415</td>
+		<td class="res-total-diff">614,362</td>
+		<td class="video-total">17,937,546</td>
+		<td class="view-total">113,096,724,644</td>
+		<td class="res-total">5,874,587,607</td>
+	</tr>
+	<tr id="d2020092006" class="we mo">
+		<td class="date" id="d20200920"><a href="total/202009#d20">2020年09月20日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-09-20 06:00:00">6時</td>
+		<td class="video-total-diff">4,046</td>
+		<td class="view-total-diff">25,204,187</td>
+		<td class="res-total-diff">549,070</td>
+		<td class="video-total">17,933,672</td>
+		<td class="view-total">113,074,709,229</td>
+		<td class="res-total">5,873,973,245</td>
+	</tr>
+	<tr id="d2020091906" class="we mo">
+		<td class="date" id="d20200919"><a href="total/202009#d19">2020年09月19日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-09-19 06:00:00">6時</td>
+		<td class="video-total-diff">3,088</td>
+		<td class="view-total-diff">18,969,042</td>
+		<td class="res-total-diff">452,622</td>
+		<td class="video-total">17,929,626</td>
+		<td class="view-total">113,049,505,042</td>
+		<td class="res-total">5,873,424,175</td>
+	</tr>
+	<tr id="d2020091806" class="we mo">
+		<td class="date" id="d20200918"><a href="total/202009#d18">2020年09月18日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-09-18 06:00:00">6時</td>
+		<td class="video-total-diff">2,623</td>
+		<td class="view-total-diff">21,300,478</td>
+		<td class="res-total-diff">462,364</td>
+		<td class="video-total">17,926,538</td>
+		<td class="view-total">113,030,536,000</td>
+		<td class="res-total">5,872,971,553</td>
+	</tr>
+	<tr id="d2020091706" class="we mo">
+		<td class="date" id="d20200917"><a href="total/202009#d17">2020年09月17日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-09-17 06:00:00">6時</td>
+		<td class="video-total-diff">2,556</td>
+		<td class="view-total-diff">19,612,032</td>
+		<td class="res-total-diff">507,920</td>
+		<td class="video-total">17,923,915</td>
+		<td class="view-total">113,009,235,522</td>
+		<td class="res-total">5,872,509,189</td>
+	</tr>
+	<tr id="d2020091606" class="we mo">
+		<td class="date" id="d20200916"><a href="total/202009#d16">2020年09月16日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-09-16 06:00:00">6時</td>
+		<td class="video-total-diff">3,102</td>
+		<td class="view-total-diff">18,002,652</td>
+		<td class="res-total-diff">489,568</td>
+		<td class="video-total">17,921,359</td>
+		<td class="view-total">112,989,623,490</td>
+		<td class="res-total">5,872,001,269</td>
+	</tr>
+	<tr id="d2020091506" class="we mo">
+		<td class="date" id="d20200915"><a href="total/202009#d15">2020年09月15日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-09-15 06:00:00">6時</td>
+		<td class="video-total-diff">2,134</td>
+		<td class="view-total-diff">15,345,690</td>
+		<td class="res-total-diff">469,322</td>
+		<td class="video-total">17,918,257</td>
+		<td class="view-total">112,971,620,838</td>
+		<td class="res-total">5,871,511,701</td>
+	</tr>
+	<tr id="d2020091406" class="wo mo">
+		<td class="date" id="d20200914"><a href="total/202009#d14">2020年09月14日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-09-14 06:00:02">6時</td>
+		<td class="video-total-diff">3,963</td>
+		<td class="view-total-diff">22,617,595</td>
+		<td class="res-total-diff">624,763</td>
+		<td class="video-total">17,916,123</td>
+		<td class="view-total">112,956,275,148</td>
+		<td class="res-total">5,871,042,379</td>
+	</tr>
+	<tr id="d2020091306" class="wo mo">
+		<td class="date" id="d20200913"><a href="total/202009#d13">2020年09月13日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-09-13 06:00:01">6時</td>
+		<td class="video-total-diff">4,058</td>
+		<td class="view-total-diff">26,223,621</td>
+		<td class="res-total-diff">569,802</td>
+		<td class="video-total">17,912,160</td>
+		<td class="view-total">112,933,657,553</td>
+		<td class="res-total">5,870,417,616</td>
+	</tr>
+	<tr id="d2020091206" class="wo mo">
+		<td class="date" id="d20200912"><a href="total/202009#d12">2020年09月12日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-09-12 06:00:00">6時</td>
+		<td class="video-total-diff">2,551</td>
+		<td class="view-total-diff">12,382,936</td>
+		<td class="res-total-diff">453,712</td>
+		<td class="video-total">17,908,102</td>
+		<td class="view-total">112,907,433,932</td>
+		<td class="res-total">5,869,847,814</td>
+	</tr>
+	<tr id="d2020091106" class="wo mo">
+		<td class="date" id="d20200911"><a href="total/202009#d11">2020年09月11日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-09-11 06:00:00">6時</td>
+		<td class="video-total-diff">2,092</td>
+		<td class="view-total-diff">16,844,838</td>
+		<td class="res-total-diff">450,555</td>
+		<td class="video-total">17,905,551</td>
+		<td class="view-total">112,895,050,996</td>
+		<td class="res-total">5,869,394,102</td>
+	</tr>
+	<tr id="d2020091006" class="wo mo">
+		<td class="date" id="d20200910"><a href="total/202009#d10">2020年09月10日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-09-10 06:00:00">6時</td>
+		<td class="video-total-diff">2,670</td>
+		<td class="view-total-diff">20,157,102</td>
+		<td class="res-total-diff">432,645</td>
+		<td class="video-total">17,903,459</td>
+		<td class="view-total">112,878,206,158</td>
+		<td class="res-total">5,868,943,547</td>
+	</tr>
+	<tr id="d2020090906" class="wo mo">
+		<td class="date" id="d20200909"><a href="total/202009#d09">2020年09月09日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-09-09 06:00:00">6時</td>
+		<td class="video-total-diff">2,257</td>
+		<td class="view-total-diff">17,225,617</td>
+		<td class="res-total-diff">427,690</td>
+		<td class="video-total">17,900,789</td>
+		<td class="view-total">112,858,049,056</td>
+		<td class="res-total">5,868,510,902</td>
+	</tr>
+	<tr id="d2020090806" class="wo mo">
+		<td class="date" id="d20200908"><a href="total/202009#d08">2020年09月08日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-09-08 06:00:00">6時</td>
+		<td class="video-total-diff">2,326</td>
+		<td class="view-total-diff">18,630,185</td>
+		<td class="res-total-diff">509,306</td>
+		<td class="video-total">17,898,532</td>
+		<td class="view-total">112,840,823,439</td>
+		<td class="res-total">5,868,083,212</td>
+	</tr>
+	<tr id="d2020090706" class="we mo">
+		<td class="date" id="d20200907"><a href="total/202009#d07">2020年09月07日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-09-07 06:00:00">6時</td>
+		<td class="video-total-diff">3,615</td>
+		<td class="view-total-diff">23,658,486</td>
+		<td class="res-total-diff">630,081</td>
+		<td class="video-total">17,896,206</td>
+		<td class="view-total">112,822,193,254</td>
+		<td class="res-total">5,867,573,906</td>
+	</tr>
+	<tr id="d2020090606" class="we mo">
+		<td class="date" id="d20200906"><a href="total/202009#d06">2020年09月06日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-09-06 06:00:00">6時</td>
+		<td class="video-total-diff">3,652</td>
+		<td class="view-total-diff">39,074,313</td>
+		<td class="res-total-diff">530,447</td>
+		<td class="video-total">17,892,591</td>
+		<td class="view-total">112,798,534,768</td>
+		<td class="res-total">5,866,943,825</td>
+	</tr>
+	<tr id="d2020090506" class="we mo">
+		<td class="date" id="d20200905"><a href="total/202009#d05">2020年09月05日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-09-05 06:00:00">6時</td>
+		<td class="video-total-diff">3,395</td>
+		<td class="view-total-diff">37,547,051</td>
+		<td class="res-total-diff">450,721</td>
+		<td class="video-total">17,888,939</td>
+		<td class="view-total">112,759,460,455</td>
+		<td class="res-total">5,866,413,378</td>
+	</tr>
+	<tr id="d2020090406" class="we mo">
+		<td class="date" id="d20200904"><a href="total/202009#d04">2020年09月04日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-09-04 06:00:00">6時</td>
+		<td class="video-total-diff">2,682</td>
+		<td class="view-total-diff">15,844,535</td>
+		<td class="res-total-diff">390,967</td>
+		<td class="video-total">17,885,544</td>
+		<td class="view-total">112,721,913,404</td>
+		<td class="res-total">5,865,962,657</td>
+	</tr>
+	<tr id="d2020090306" class="we mo">
+		<td class="date" id="d20200903"><a href="total/202009#d03">2020年09月03日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-09-03 06:00:00">6時</td>
+		<td class="video-total-diff">3,023</td>
+		<td class="view-total-diff">18,577,153</td>
+		<td class="res-total-diff">462,691</td>
+		<td class="video-total">17,882,862</td>
+		<td class="view-total">112,706,068,869</td>
+		<td class="res-total">5,865,571,690</td>
+	</tr>
+	<tr id="d2020090206" class="we mo">
+		<td class="date" id="d20200902"><a href="total/202009#d02">2020年09月02日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-09-02 06:00:00">6時</td>
+		<td class="video-total-diff">2,532</td>
+		<td class="view-total-diff">34,330,865</td>
+		<td class="res-total-diff">429,705</td>
+		<td class="video-total">17,879,839</td>
+		<td class="view-total">112,687,491,716</td>
+		<td class="res-total">5,865,108,999</td>
+	</tr>
+	<tr id="d2020090106" class="we me">
+		<td class="date" id="d20200901"><a href="total/202009#d01">2020年09月01日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-09-01 06:00:00">6時</td>
+		<td class="video-total-diff">2,400</td>
+		<td class="view-total-diff down">-833,241</td>
+		<td class="res-total-diff">457,190</td>
+		<td class="video-total">17,877,307</td>
+		<td class="view-total">112,653,160,851</td>
+		<td class="res-total">5,864,679,294</td>
+	</tr>
+	<tr id="d2020083106" class="wo me">
+		<td class="date" id="d20200831"><a href="total/202008#d31">2020年08月31日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-08-31 06:00:01">6時</td>
+		<td class="video-total-diff">3,829</td>
+		<td class="view-total-diff">11,310,145</td>
+		<td class="res-total-diff">658,291</td>
+		<td class="video-total">17,874,907</td>
+		<td class="view-total">112,653,994,092</td>
+		<td class="res-total">5,864,222,104</td>
+	</tr>
+	<tr id="d2020083006" class="wo me">
+		<td class="date" id="d20200830"><a href="total/202008#d30">2020年08月30日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-08-30 06:00:01">6時</td>
+		<td class="video-total-diff">3,902</td>
+		<td class="view-total-diff">22,741,313</td>
+		<td class="res-total-diff">612,904</td>
+		<td class="video-total">17,871,078</td>
+		<td class="view-total">112,642,683,947</td>
+		<td class="res-total">5,863,563,813</td>
+	</tr>
+	<tr id="d2020082906" class="wo me">
+		<td class="date" id="d20200829"><a href="total/202008#d29">2020年08月29日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-08-29 06:00:00">6時</td>
+		<td class="video-total-diff">3,653</td>
+		<td class="view-total-diff">16,691,264</td>
+		<td class="res-total-diff">436,471</td>
+		<td class="video-total">17,867,176</td>
+		<td class="view-total">112,619,942,634</td>
+		<td class="res-total">5,862,950,909</td>
+	</tr>
+	<tr id="d2020082806" class="wo me">
+		<td class="date" id="d20200828"><a href="total/202008#d28">2020年08月28日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-08-28 06:00:00">6時</td>
+		<td class="video-total-diff">3,010</td>
+		<td class="view-total-diff">20,249,620</td>
+		<td class="res-total-diff">428,392</td>
+		<td class="video-total">17,863,523</td>
+		<td class="view-total">112,603,251,370</td>
+		<td class="res-total">5,862,514,438</td>
+	</tr>
+	<tr id="d2020082706" class="wo me">
+		<td class="date" id="d20200827"><a href="total/202008#d27">2020年08月27日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-08-27 06:00:00">6時</td>
+		<td class="video-total-diff">3,188</td>
+		<td class="view-total-diff">20,847,801</td>
+		<td class="res-total-diff">435,351</td>
+		<td class="video-total">17,860,513</td>
+		<td class="view-total">112,583,001,750</td>
+		<td class="res-total">5,862,086,046</td>
+	</tr>
+	<tr id="d2020082606" class="wo me">
+		<td class="date" id="d20200826"><a href="total/202008#d26">2020年08月26日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-08-26 06:00:00">6時</td>
+		<td class="video-total-diff">2,372</td>
+		<td class="view-total-diff down">-5,935,148</td>
+		<td class="res-total-diff">452,947</td>
+		<td class="video-total">17,857,325</td>
+		<td class="view-total">112,562,153,949</td>
+		<td class="res-total">5,861,650,695</td>
+	</tr>
+	<tr id="d2020082506" class="wo me">
+		<td class="date" id="d20200825"><a href="total/202008#d25">2020年08月25日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-08-25 06:00:00">6時</td>
+		<td class="video-total-diff">2,278</td>
+		<td class="view-total-diff">15,533,943</td>
+		<td class="res-total-diff">463,919</td>
+		<td class="video-total">17,854,953</td>
+		<td class="view-total">112,568,089,097</td>
+		<td class="res-total">5,861,197,748</td>
+	</tr>
+	<tr id="d2020082406" class="we me">
+		<td class="date" id="d20200824"><a href="total/202008#d24">2020年08月24日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-08-24 06:00:00">6時</td>
+		<td class="video-total-diff">4,391</td>
+		<td class="view-total-diff">25,974,259</td>
+		<td class="res-total-diff">586,220</td>
+		<td class="video-total">17,852,675</td>
+		<td class="view-total">112,552,555,154</td>
+		<td class="res-total">5,860,733,829</td>
+	</tr>
+	<tr id="d2020082306" class="we me">
+		<td class="date" id="d20200823"><a href="total/202008#d23">2020年08月23日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-08-23 06:00:00">6時</td>
+		<td class="video-total-diff">3,630</td>
+		<td class="view-total-diff">19,573,530</td>
+		<td class="res-total-diff">576,027</td>
+		<td class="video-total">17,848,284</td>
+		<td class="view-total">112,526,580,895</td>
+		<td class="res-total">5,860,147,609</td>
+	</tr>
+	<tr id="d2020082206" class="we me">
+		<td class="date" id="d20200822"><a href="total/202008#d22">2020年08月22日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-08-22 06:00:00">6時</td>
+		<td class="video-total-diff">3,270</td>
+		<td class="view-total-diff">21,130,643</td>
+		<td class="res-total-diff">480,629</td>
+		<td class="video-total">17,844,654</td>
+		<td class="view-total">112,507,007,365</td>
+		<td class="res-total">5,859,571,582</td>
+	</tr>
+	<tr id="d2020082106" class="we me">
+		<td class="date" id="d20200821"><a href="total/202008#d21">2020年08月21日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-08-21 06:00:00">6時</td>
+		<td class="video-total-diff">2,813</td>
+		<td class="view-total-diff">19,244,190</td>
+		<td class="res-total-diff">471,401</td>
+		<td class="video-total">17,841,384</td>
+		<td class="view-total">112,485,876,722</td>
+		<td class="res-total">5,859,090,953</td>
+	</tr>
+	<tr id="d2020082006" class="we me">
+		<td class="date" id="d20200820"><a href="total/202008#d20">2020年08月20日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-08-20 06:00:00">6時</td>
+		<td class="video-total-diff">3,154</td>
+		<td class="view-total-diff">20,562,746</td>
+		<td class="res-total-diff">487,636</td>
+		<td class="video-total">17,838,571</td>
+		<td class="view-total">112,466,632,532</td>
+		<td class="res-total">5,858,619,552</td>
+	</tr>
+	<tr id="d2020081906" class="we me">
+		<td class="date" id="d20200819"><a href="total/202008#d19">2020年08月19日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-08-19 06:00:00">6時</td>
+		<td class="video-total-diff">2,911</td>
+		<td class="view-total-diff">20,007,947</td>
+		<td class="res-total-diff">521,111</td>
+		<td class="video-total">17,835,417</td>
+		<td class="view-total">112,446,069,786</td>
+		<td class="res-total">5,858,131,916</td>
+	</tr>
+	<tr id="d2020081806" class="we me">
+		<td class="date" id="d20200818"><a href="total/202008#d18">2020年08月18日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-08-18 06:00:00">6時</td>
+		<td class="video-total-diff">2,265</td>
+		<td class="view-total-diff">18,489,564</td>
+		<td class="res-total-diff">591,950</td>
+		<td class="video-total">17,832,506</td>
+		<td class="view-total">112,426,061,839</td>
+		<td class="res-total">5,857,610,805</td>
+	</tr>
+	<tr id="d2020081706" class="wo me">
+		<td class="date" id="d20200817"><a href="total/202008#d17">2020年08月17日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-08-17 06:00:00">6時</td>
+		<td class="video-total-diff">4,570</td>
+		<td class="view-total-diff">24,645,431</td>
+		<td class="res-total-diff">643,709</td>
+		<td class="video-total">17,830,241</td>
+		<td class="view-total">112,407,572,275</td>
+		<td class="res-total">5,857,018,855</td>
+	</tr>
+	<tr id="d2020081606" class="wo me">
+		<td class="date" id="d20200816"><a href="total/202008#d16">2020年08月16日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-08-16 06:00:00">6時</td>
+		<td class="video-total-diff">4,273</td>
+		<td class="view-total-diff down">-10,219,679</td>
+		<td class="res-total-diff">684,699</td>
+		<td class="video-total">17,825,671</td>
+		<td class="view-total">112,382,926,844</td>
+		<td class="res-total">5,856,375,146</td>
+	</tr>
+	<tr id="d2020081506" class="wo me">
+		<td class="date" id="d20200815"><a href="total/202008#d15">2020年08月15日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-08-15 06:00:00">6時</td>
+		<td class="video-total-diff">4,428</td>
+		<td class="view-total-diff">18,911,281</td>
+		<td class="res-total-diff">663,286</td>
+		<td class="video-total">17,821,398</td>
+		<td class="view-total">112,393,146,523</td>
+		<td class="res-total">5,855,690,447</td>
+	</tr>
+	<tr id="d2020081406" class="wo me">
+		<td class="date" id="d20200814"><a href="total/202008#d14">2020年08月14日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-08-14 06:00:00">6時</td>
+		<td class="video-total-diff">3,445</td>
+		<td class="view-total-diff">21,870,328</td>
+		<td class="res-total-diff">570,978</td>
+		<td class="video-total">17,816,970</td>
+		<td class="view-total">112,374,235,242</td>
+		<td class="res-total">5,855,027,161</td>
+	</tr>
+	<tr id="d2020081306" class="wo me">
+		<td class="date" id="d20200813"><a href="total/202008#d13">2020年08月13日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-08-13 06:00:00">6時</td>
+		<td class="video-total-diff">3,241</td>
+		<td class="view-total-diff">21,357,035</td>
+		<td class="res-total-diff">596,510</td>
+		<td class="video-total">17,813,525</td>
+		<td class="view-total">112,352,364,914</td>
+		<td class="res-total">5,854,456,183</td>
+	</tr>
+	<tr id="d2020081206" class="wo me">
+		<td class="date" id="d20200812"><a href="total/202008#d12">2020年08月12日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-08-12 06:00:00">6時</td>
+		<td class="video-total-diff">3,122</td>
+		<td class="view-total-diff">14,448,475</td>
+		<td class="res-total-diff">773,667</td>
+		<td class="video-total">17,810,284</td>
+		<td class="view-total">112,331,007,879</td>
+		<td class="res-total">5,853,859,673</td>
+	</tr>
+	<tr id="d2020081106" class="wo me">
+		<td class="date" id="d20200811"><a href="total/202008#d11">2020年08月11日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-08-11 06:00:00">6時</td>
+		<td class="video-total-diff">3,500</td>
+		<td class="view-total-diff">2,444,848</td>
+		<td class="res-total-diff">665,741</td>
+		<td class="video-total">17,807,162</td>
+		<td class="view-total">112,316,559,404</td>
+		<td class="res-total">5,853,086,006</td>
+	</tr>
+	<tr id="d2020081006" class="we me">
+		<td class="date" id="d20200810"><a href="total/202008#d10">2020年08月10日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-08-10 06:00:24">6時</td>
+		<td class="video-total-diff">3,712</td>
+		<td class="view-total-diff">12,775,832</td>
+		<td class="res-total-diff">1,293,840</td>
+		<td class="video-total">17,803,662</td>
+		<td class="view-total">112,314,114,556</td>
+		<td class="res-total">5,852,420,265</td>
+	</tr>
+	<tr id="d2020080906" class="we me">
+		<td class="date" id="d20200809"><a href="total/202008#d09">2020年08月09日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-08-09 06:00:00">6時</td>
+		<td class="video-total-diff">4,328</td>
+		<td class="view-total-diff">24,315,906</td>
+		<td class="res-total-diff">844,819</td>
+		<td class="video-total">17,799,950</td>
+		<td class="view-total">112,301,338,724</td>
+		<td class="res-total">5,851,126,425</td>
+	</tr>
+	<tr id="d2020080806" class="we me">
+		<td class="date" id="d20200808"><a href="total/202008#d08">2020年08月08日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-08-08 06:00:00">6時</td>
+		<td class="video-total-diff">3,127</td>
+		<td class="view-total-diff">22,907,309</td>
+		<td class="res-total-diff">549,473</td>
+		<td class="video-total">17,795,622</td>
+		<td class="view-total">112,277,022,818</td>
+		<td class="res-total">5,850,281,606</td>
+	</tr>
+	<tr id="d2020080706" class="we me">
+		<td class="date" id="d20200807"><a href="total/202008#d07">2020年08月07日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-08-07 06:00:00">6時</td>
+		<td class="video-total-diff">2,902</td>
+		<td class="view-total-diff">19,670,758</td>
+		<td class="res-total-diff">500,477</td>
+		<td class="video-total">17,792,495</td>
+		<td class="view-total">112,254,115,509</td>
+		<td class="res-total">5,849,732,133</td>
+	</tr>
+	<tr id="d2020080606" class="we me">
+		<td class="date" id="d20200806"><a href="total/202008#d06">2020年08月06日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-08-06 06:00:00">6時</td>
+		<td class="video-total-diff">2,942</td>
+		<td class="view-total-diff">5,649,379</td>
+		<td class="res-total-diff">475,657</td>
+		<td class="video-total">17,789,593</td>
+		<td class="view-total">112,234,444,751</td>
+		<td class="res-total">5,849,231,656</td>
+	</tr>
+	<tr id="d2020080506" class="we me">
+		<td class="date" id="d20200805"><a href="total/202008#d05">2020年08月05日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-08-05 06:00:00">6時</td>
+		<td class="video-total-diff">2,206</td>
+		<td class="view-total-diff">19,443,141</td>
+		<td class="res-total-diff">505,244</td>
+		<td class="video-total">17,786,651</td>
+		<td class="view-total">112,228,795,372</td>
+		<td class="res-total">5,848,755,999</td>
+	</tr>
+	<tr id="d2020080406" class="we me">
+		<td class="date" id="d20200804"><a href="total/202008#d04">2020年08月04日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-08-04 06:00:01">6時</td>
+		<td class="video-total-diff">2,038</td>
+		<td class="view-total-diff">15,642,361</td>
+		<td class="res-total-diff">620,313</td>
+		<td class="video-total">17,784,445</td>
+		<td class="view-total">112,209,352,231</td>
+		<td class="res-total">5,848,250,755</td>
+	</tr>
+	<tr id="d2020080306" class="wo me">
+		<td class="date" id="d20200803"><a href="total/202008#d03">2020年08月03日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-08-03 06:00:00">6時</td>
+		<td class="video-total-diff">3,546</td>
+		<td class="view-total-diff">21,514,968</td>
+		<td class="res-total-diff">606,588</td>
+		<td class="video-total">17,782,407</td>
+		<td class="view-total">112,193,709,870</td>
+		<td class="res-total">5,847,630,442</td>
+	</tr>
+	<tr id="d2020080206" class="wo me">
+		<td class="date" id="d20200802"><a href="total/202008#d02">2020年08月02日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-08-02 06:00:01">6時</td>
+		<td class="video-total-diff">3,848</td>
+		<td class="view-total-diff">34,710,406</td>
+		<td class="res-total-diff">566,755</td>
+		<td class="video-total">17,778,861</td>
+		<td class="view-total">112,172,194,902</td>
+		<td class="res-total">5,847,023,854</td>
+	</tr>
+	<tr id="d2020080106" class="wo mo">
+		<td class="date" id="d20200801"><a href="total/202008#d01">2020年08月01日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-08-01 06:00:01">6時</td>
+		<td class="video-total-diff">3,206</td>
+		<td class="view-total-diff down">-1,847,131</td>
+		<td class="res-total-diff">478,642</td>
+		<td class="video-total">17,775,013</td>
+		<td class="view-total">112,137,484,496</td>
+		<td class="res-total">5,846,457,099</td>
+	</tr>
+	<tr id="d2020073106" class="wo mo">
+		<td class="date" id="d20200731"><a href="total/202007#d31">2020年07月31日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-07-31 06:00:00">6時</td>
+		<td class="video-total-diff">2,682</td>
+		<td class="view-total-diff">17,606,630</td>
+		<td class="res-total-diff">430,156</td>
+		<td class="video-total">17,771,807</td>
+		<td class="view-total">112,139,331,627</td>
+		<td class="res-total">5,845,978,457</td>
+	</tr>
+	<tr id="d2020073006" class="wo mo">
+		<td class="date" id="d20200730"><a href="total/202007#d30">2020年07月30日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-07-30 06:00:00">6時</td>
+		<td class="video-total-diff">2,582</td>
+		<td class="view-total-diff">20,542,870</td>
+		<td class="res-total-diff">805,658</td>
+		<td class="video-total">17,769,125</td>
+		<td class="view-total">112,121,724,997</td>
+		<td class="res-total">5,845,548,301</td>
+	</tr>
+	<tr id="d2020072906" class="wo mo">
+		<td class="date" id="d20200729"><a href="total/202007#d29">2020年07月29日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-07-29 06:00:00">6時</td>
+		<td class="video-total-diff">2,291</td>
+		<td class="view-total-diff">20,429,123</td>
+		<td class="res-total-diff">2,954,719</td>
+		<td class="video-total">17,766,543</td>
+		<td class="view-total">112,101,182,127</td>
+		<td class="res-total">5,844,742,643</td>
+	</tr>
+	<tr id="d2020072806" class="wo mo">
+		<td class="date" id="d20200728"><a href="total/202007#d28">2020年07月28日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-07-28 06:00:00">6時</td>
+		<td class="video-total-diff">801</td>
+		<td class="view-total-diff down">-7,829,570</td>
+		<td class="res-total-diff">3,634,447</td>
+		<td class="video-total">17,764,252</td>
+		<td class="view-total">112,080,753,004</td>
+		<td class="res-total">5,841,787,924</td>
+	</tr>
+	<tr id="d2020072706" class="we mo">
+		<td class="date" id="d20200727"><a href="total/202007#d27">2020年07月27日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-07-27 06:00:00">6時</td>
+		<td class="video-total-diff">3,567</td>
+		<td class="view-total-diff">26,796,007</td>
+		<td class="res-total-diff">562,688</td>
+		<td class="video-total">17,763,451</td>
+		<td class="view-total">112,088,582,574</td>
+		<td class="res-total">5,838,153,477</td>
+	</tr>
+	<tr id="d2020072606" class="we mo">
+		<td class="date" id="d20200726"><a href="total/202007#d26">2020年07月26日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-07-26 06:00:00">6時</td>
+		<td class="video-total-diff">4,433</td>
+		<td class="view-total-diff">26,683,225</td>
+		<td class="res-total-diff">586,967</td>
+		<td class="video-total">17,759,884</td>
+		<td class="view-total">112,061,786,567</td>
+		<td class="res-total">5,837,590,789</td>
+	</tr>
+	<tr id="d2020072506" class="we mo">
+		<td class="date" id="d20200725"><a href="total/202007#d25">2020年07月25日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-07-25 06:00:00">6時</td>
+		<td class="video-total-diff">3,445</td>
+		<td class="view-total-diff">24,287,933</td>
+		<td class="res-total-diff">530,796</td>
+		<td class="video-total">17,755,451</td>
+		<td class="view-total">112,035,103,342</td>
+		<td class="res-total">5,837,003,822</td>
+	</tr>
+	<tr id="d2020072406" class="we mo">
+		<td class="date" id="d20200724"><a href="total/202007#d24">2020年07月24日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-07-24 06:00:00">6時</td>
+		<td class="video-total-diff">3,323</td>
+		<td class="view-total-diff">21,908,611</td>
+		<td class="res-total-diff">546,868</td>
+		<td class="video-total">17,752,006</td>
+		<td class="view-total">112,010,815,409</td>
+		<td class="res-total">5,836,473,026</td>
+	</tr>
+	<tr id="d2020072306" class="we mo">
+		<td class="date" id="d20200723"><a href="total/202007#d23">2020年07月23日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-07-23 06:00:00">6時</td>
+		<td class="video-total-diff">2,318</td>
+		<td class="view-total-diff">16,854,444</td>
+		<td class="res-total-diff">405,374</td>
+		<td class="video-total">17,748,683</td>
+		<td class="view-total">111,988,906,798</td>
+		<td class="res-total">5,835,926,158</td>
+	</tr>
+	<tr id="d2020072206" class="we mo">
+		<td class="date" id="d20200722"><a href="total/202007#d22">2020年07月22日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-07-22 06:00:01">6時</td>
+		<td class="video-total-diff">2,854</td>
+		<td class="view-total-diff">18,642,780</td>
+		<td class="res-total-diff">388,711</td>
+		<td class="video-total">17,746,365</td>
+		<td class="view-total">111,972,052,354</td>
+		<td class="res-total">5,835,520,784</td>
+	</tr>
+	<tr id="d2020072106" class="we mo">
+		<td class="date" id="d20200721"><a href="total/202007#d21">2020年07月21日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-07-21 06:00:00">6時</td>
+		<td class="video-total-diff">2,044</td>
+		<td class="view-total-diff">17,897,882</td>
+		<td class="res-total-diff">404,592</td>
+		<td class="video-total">17,743,511</td>
+		<td class="view-total">111,953,409,574</td>
+		<td class="res-total">5,835,132,073</td>
+	</tr>
+	<tr id="d2020072006" class="wo mo">
+		<td class="date" id="d20200720"><a href="total/202007#d20">2020年07月20日(<span class="mon holiday" title="海の日">月</span>)</a></td>
+		<td class="hour" title="2020-07-20 06:00:00">6時</td>
+		<td class="video-total-diff">3,666</td>
+		<td class="view-total-diff">24,901,875</td>
+		<td class="res-total-diff">577,367</td>
+		<td class="video-total">17,741,467</td>
+		<td class="view-total">111,935,511,692</td>
+		<td class="res-total">5,834,727,481</td>
+	</tr>
+	<tr id="d2020071906" class="wo mo">
+		<td class="date" id="d20200719"><a href="total/202007#d19">2020年07月19日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-07-19 06:00:00">6時</td>
+		<td class="video-total-diff">3,713</td>
+		<td class="view-total-diff">23,376,102</td>
+		<td class="res-total-diff">549,651</td>
+		<td class="video-total">17,737,801</td>
+		<td class="view-total">111,910,609,817</td>
+		<td class="res-total">5,834,150,114</td>
+	</tr>
+	<tr id="d2020071806" class="wo mo">
+		<td class="date" id="d20200718"><a href="total/202007#d18">2020年07月18日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-07-18 06:00:00">6時</td>
+		<td class="video-total-diff">2,678</td>
+		<td class="view-total-diff">11,259,508</td>
+		<td class="res-total-diff">403,988</td>
+		<td class="video-total">17,734,088</td>
+		<td class="view-total">111,887,233,715</td>
+		<td class="res-total">5,833,600,463</td>
+	</tr>
+	<tr id="d2020071706" class="wo mo">
+		<td class="date" id="d20200717"><a href="total/202007#d17">2020年07月17日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-07-17 06:00:00">6時</td>
+		<td class="video-total-diff">2,772</td>
+		<td class="view-total-diff">20,603,214</td>
+		<td class="res-total-diff">487,413</td>
+		<td class="video-total">17,731,410</td>
+		<td class="view-total">111,875,974,207</td>
+		<td class="res-total">5,833,196,475</td>
+	</tr>
+	<tr id="d2020071606" class="wo mo">
+		<td class="date" id="d20200716"><a href="total/202007#d16">2020年07月16日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-07-16 06:00:00">6時</td>
+		<td class="video-total-diff">2,455</td>
+		<td class="view-total-diff">20,077,279</td>
+		<td class="res-total-diff">384,494</td>
+		<td class="video-total">17,728,638</td>
+		<td class="view-total">111,855,370,993</td>
+		<td class="res-total">5,832,709,062</td>
+	</tr>
+	<tr id="d2020071506" class="wo mo">
+		<td class="date" id="d20200715"><a href="total/202007#d15">2020年07月15日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-07-15 06:00:00">6時</td>
+		<td class="video-total-diff">2,657</td>
+		<td class="view-total-diff">20,580,117</td>
+		<td class="res-total-diff">503,973</td>
+		<td class="video-total">17,726,183</td>
+		<td class="view-total">111,835,293,714</td>
+		<td class="res-total">5,832,324,568</td>
+	</tr>
+	<tr id="d2020071406" class="wo mo">
+		<td class="date" id="d20200714"><a href="total/202007#d14">2020年07月14日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-07-14 06:00:00">6時</td>
+		<td class="video-total-diff">2,181</td>
+		<td class="view-total-diff">22,207,022</td>
+		<td class="res-total-diff">611,501</td>
+		<td class="video-total">17,723,526</td>
+		<td class="view-total">111,814,713,597</td>
+		<td class="res-total">5,831,820,595</td>
+	</tr>
+	<tr id="d2020071306" class="we mo">
+		<td class="date" id="d20200713"><a href="total/202007#d13">2020年07月13日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-07-13 06:00:00">6時</td>
+		<td class="video-total-diff">3,655</td>
+		<td class="view-total-diff">25,178,424</td>
+		<td class="res-total-diff">528,394</td>
+		<td class="video-total">17,721,345</td>
+		<td class="view-total">111,792,506,575</td>
+		<td class="res-total">5,831,209,094</td>
+	</tr>
+	<tr id="d2020071206" class="we mo">
+		<td class="date" id="d20200712"><a href="total/202007#d12">2020年07月12日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-07-12 06:00:00">6時</td>
+		<td class="video-total-diff">3,728</td>
+		<td class="view-total-diff">25,898,982</td>
+		<td class="res-total-diff">547,791</td>
+		<td class="video-total">17,717,690</td>
+		<td class="view-total">111,767,328,151</td>
+		<td class="res-total">5,830,680,700</td>
+	</tr>
+	<tr id="d2020071106" class="we mo">
+		<td class="date" id="d20200711"><a href="total/202007#d11">2020年07月11日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-07-11 06:00:00">6時</td>
+		<td class="video-total-diff">2,701</td>
+		<td class="view-total-diff">11,219,268</td>
+		<td class="res-total-diff">445,008</td>
+		<td class="video-total">17,713,962</td>
+		<td class="view-total">111,741,429,169</td>
+		<td class="res-total">5,830,132,909</td>
+	</tr>
+	<tr id="d2020071006" class="we mo">
+		<td class="date" id="d20200710"><a href="total/202007#d10">2020年07月10日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-07-10 06:00:00">6時</td>
+		<td class="video-total-diff">2,600</td>
+		<td class="view-total-diff">15,869,136</td>
+		<td class="res-total-diff">384,036</td>
+		<td class="video-total">17,711,261</td>
+		<td class="view-total">111,730,209,901</td>
+		<td class="res-total">5,829,687,901</td>
+	</tr>
+	<tr id="d2020070906" class="we mo">
+		<td class="date" id="d20200709"><a href="total/202007#d09">2020年07月09日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-07-09 06:00:00">6時</td>
+		<td class="video-total-diff">2,564</td>
+		<td class="view-total-diff">19,858,398</td>
+		<td class="res-total-diff">420,447</td>
+		<td class="video-total">17,708,661</td>
+		<td class="view-total">111,714,340,765</td>
+		<td class="res-total">5,829,303,865</td>
+	</tr>
+	<tr id="d2020070806" class="we mo">
+		<td class="date" id="d20200708"><a href="total/202007#d08">2020年07月08日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-07-08 06:00:01">6時</td>
+		<td class="video-total-diff">2,986</td>
+		<td class="view-total-diff">20,550,399</td>
+		<td class="res-total-diff">502,374</td>
+		<td class="video-total">17,706,097</td>
+		<td class="view-total">111,694,482,367</td>
+		<td class="res-total">5,828,883,418</td>
+	</tr>
+	<tr id="d2020070706" class="we mo">
+		<td class="date" id="d20200707"><a href="total/202007#d07">2020年07月07日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-07-07 06:00:00">6時</td>
+		<td class="video-total-diff">2,482</td>
+		<td class="view-total-diff">17,561,983</td>
+		<td class="res-total-diff">598,597</td>
+		<td class="video-total">17,703,111</td>
+		<td class="view-total">111,673,931,968</td>
+		<td class="res-total">5,828,381,044</td>
+	</tr>
+	<tr id="d2020070606" class="wo mo">
+		<td class="date" id="d20200706"><a href="total/202007#d06">2020年07月06日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-07-06 06:00:00">6時</td>
+		<td class="video-total-diff">4,209</td>
+		<td class="view-total-diff">25,802,517</td>
+		<td class="res-total-diff">691,150</td>
+		<td class="video-total">17,700,629</td>
+		<td class="view-total">111,656,369,985</td>
+		<td class="res-total">5,827,782,447</td>
+	</tr>
+	<tr id="d2020070506" class="wo mo">
+		<td class="date" id="d20200705"><a href="total/202007#d05">2020年07月05日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-07-05 06:00:00">6時</td>
+		<td class="video-total-diff">4,043</td>
+		<td class="view-total-diff">22,536,162</td>
+		<td class="res-total-diff">688,880</td>
+		<td class="video-total">17,696,420</td>
+		<td class="view-total">111,630,567,468</td>
+		<td class="res-total">5,827,091,297</td>
+	</tr>
+	<tr id="d2020070406" class="wo mo">
+		<td class="date" id="d20200704"><a href="total/202007#d04">2020年07月04日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-07-04 06:00:01">6時</td>
+		<td class="video-total-diff">2,976</td>
+		<td class="view-total-diff">17,110,525</td>
+		<td class="res-total-diff">434,652</td>
+		<td class="video-total">17,692,377</td>
+		<td class="view-total">111,608,031,306</td>
+		<td class="res-total">5,826,402,417</td>
+	</tr>
+	<tr id="d2020070306" class="wo mo">
+		<td class="date" id="d20200703"><a href="total/202007#d03">2020年07月03日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-07-03 06:00:00">6時</td>
+		<td class="video-total-diff">2,899</td>
+		<td class="view-total-diff">16,039,106</td>
+		<td class="res-total-diff">379,624</td>
+		<td class="video-total">17,689,401</td>
+		<td class="view-total">111,590,920,781</td>
+		<td class="res-total">5,825,967,765</td>
+	</tr>
+	<tr id="d2020070206" class="wo mo">
+		<td class="date" id="d20200702"><a href="total/202007#d02">2020年07月02日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-07-02 06:00:01">6時</td>
+		<td class="video-total-diff">3,022</td>
+		<td class="view-total-diff">30,327,861</td>
+		<td class="res-total-diff">387,061</td>
+		<td class="video-total">17,686,502</td>
+		<td class="view-total">111,574,881,675</td>
+		<td class="res-total">5,825,588,141</td>
+	</tr>
+	<tr id="d2020070106" class="wo me">
+		<td class="date" id="d20200701"><a href="total/202007#d01">2020年07月01日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-07-01 06:00:00">6時</td>
+		<td class="video-total-diff">2,262</td>
+		<td class="view-total-diff">14,897,442</td>
+		<td class="res-total-diff">397,036</td>
+		<td class="video-total">17,683,480</td>
+		<td class="view-total">111,544,553,814</td>
+		<td class="res-total">5,825,201,080</td>
+	</tr>
+	<tr id="d2020063006" class="wo me">
+		<td class="date" id="d20200630"><a href="total/202006#d30">2020年06月30日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-06-30 06:00:00">6時</td>
+		<td class="video-total-diff">1,456</td>
+		<td class="view-total-diff">16,043,397</td>
+		<td class="res-total-diff">411,825</td>
+		<td class="video-total">17,681,218</td>
+		<td class="view-total">111,529,656,372</td>
+		<td class="res-total">5,824,804,044</td>
+	</tr>
+	<tr id="d2020062906" class="we me">
+		<td class="date" id="d20200629"><a href="total/202006#d29">2020年06月29日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-06-29 06:00:00">6時</td>
+		<td class="video-total-diff">3,696</td>
+		<td class="view-total-diff">23,739,652</td>
+		<td class="res-total-diff">587,005</td>
+		<td class="video-total">17,679,762</td>
+		<td class="view-total">111,513,612,975</td>
+		<td class="res-total">5,824,392,219</td>
+	</tr>
+	<tr id="d2020062806" class="we me">
+		<td class="date" id="d20200628"><a href="total/202006#d28">2020年06月28日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-06-28 06:00:00">6時</td>
+		<td class="video-total-diff">4,065</td>
+		<td class="view-total-diff">23,806,283</td>
+		<td class="res-total-diff">606,053</td>
+		<td class="video-total">17,676,066</td>
+		<td class="view-total">111,489,873,323</td>
+		<td class="res-total">5,823,805,214</td>
+	</tr>
+	<tr id="d2020062706" class="we me">
+		<td class="date" id="d20200627"><a href="total/202006#d27">2020年06月27日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-06-27 06:00:00">6時</td>
+		<td class="video-total-diff">3,215</td>
+		<td class="view-total-diff">9,475,456</td>
+		<td class="res-total-diff">409,268</td>
+		<td class="video-total">17,672,001</td>
+		<td class="view-total">111,466,067,040</td>
+		<td class="res-total">5,823,199,161</td>
+	</tr>
+	<tr id="d2020062606" class="we me">
+		<td class="date" id="d20200626"><a href="total/202006#d26">2020年06月26日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-06-26 06:00:00">6時</td>
+		<td class="video-total-diff">2,940</td>
+		<td class="view-total-diff">19,537,823</td>
+		<td class="res-total-diff">408,206</td>
+		<td class="video-total">17,668,786</td>
+		<td class="view-total">111,456,591,584</td>
+		<td class="res-total">5,822,789,893</td>
+	</tr>
+	<tr id="d2020062506" class="we me">
+		<td class="date" id="d20200625"><a href="total/202006#d25">2020年06月25日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-06-25 06:00:00">6時</td>
+		<td class="video-total-diff">2,762</td>
+		<td class="view-total-diff">18,646,951</td>
+		<td class="res-total-diff">478,754</td>
+		<td class="video-total">17,665,846</td>
+		<td class="view-total">111,437,053,761</td>
+		<td class="res-total">5,822,381,687</td>
+	</tr>
+	<tr id="d2020062406" class="we me">
+		<td class="date" id="d20200624"><a href="total/202006#d24">2020年06月24日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-06-24 06:00:00">6時</td>
+		<td class="video-total-diff">2,826</td>
+		<td class="view-total-diff">18,256,903</td>
+		<td class="res-total-diff">439,342</td>
+		<td class="video-total">17,663,084</td>
+		<td class="view-total">111,418,406,810</td>
+		<td class="res-total">5,821,902,933</td>
+	</tr>
+	<tr id="d2020062306" class="we me">
+		<td class="date" id="d20200623"><a href="total/202006#d23">2020年06月23日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-06-23 06:00:00">6時</td>
+		<td class="video-total-diff">2,378</td>
+		<td class="view-total-diff">19,596,736</td>
+		<td class="res-total-diff">416,404</td>
+		<td class="video-total">17,660,258</td>
+		<td class="view-total">111,400,149,907</td>
+		<td class="res-total">5,821,463,591</td>
+	</tr>
+	<tr id="d2020062206" class="wo me">
+		<td class="date" id="d20200622"><a href="total/202006#d22">2020年06月22日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-06-22 06:00:00">6時</td>
+		<td class="video-total-diff">4,024</td>
+		<td class="view-total-diff">23,833,444</td>
+		<td class="res-total-diff">628,742</td>
+		<td class="video-total">17,657,880</td>
+		<td class="view-total">111,380,553,171</td>
+		<td class="res-total">5,821,047,187</td>
+	</tr>
+	<tr id="d2020062106" class="wo me">
+		<td class="date" id="d20200621"><a href="total/202006#d21">2020年06月21日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-06-21 06:00:00">6時</td>
+		<td class="video-total-diff">3,587</td>
+		<td class="view-total-diff">22,331,606</td>
+		<td class="res-total-diff">556,955</td>
+		<td class="video-total">17,653,856</td>
+		<td class="view-total">111,356,719,727</td>
+		<td class="res-total">5,820,418,445</td>
+	</tr>
+	<tr id="d2020062006" class="wo me">
+		<td class="date" id="d20200620"><a href="total/202006#d20">2020年06月20日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-06-20 06:00:00">6時</td>
+		<td class="video-total-diff">4,028</td>
+		<td class="view-total-diff">27,016,820</td>
+		<td class="res-total-diff">468,968</td>
+		<td class="video-total">17,650,269</td>
+		<td class="view-total">111,334,388,121</td>
+		<td class="res-total">5,819,861,490</td>
+	</tr>
+	<tr id="d2020061906" class="wo me">
+		<td class="date" id="d20200619"><a href="total/202006#d19">2020年06月19日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-06-19 06:00:00">6時</td>
+		<td class="video-total-diff">1,670</td>
+		<td class="view-total-diff">20,193,065</td>
+		<td class="res-total-diff">407,551</td>
+		<td class="video-total">17,646,241</td>
+		<td class="view-total">111,307,371,301</td>
+		<td class="res-total">5,819,392,522</td>
+	</tr>
+	<tr id="d2020061806" class="wo me">
+		<td class="date" id="d20200618"><a href="total/202006#d18">2020年06月18日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-06-18 06:00:00">6時</td>
+		<td class="video-total-diff">2,571</td>
+		<td class="view-total-diff">19,627,482</td>
+		<td class="res-total-diff">495,007</td>
+		<td class="video-total">17,644,571</td>
+		<td class="view-total">111,287,178,236</td>
+		<td class="res-total">5,818,984,971</td>
+	</tr>
+	<tr id="d2020061706" class="wo me">
+		<td class="date" id="d20200617"><a href="total/202006#d17">2020年06月17日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-06-17 06:00:00">6時</td>
+		<td class="video-total-diff">2,116</td>
+		<td class="view-total-diff">21,003,430</td>
+		<td class="res-total-diff">489,366</td>
+		<td class="video-total">17,642,000</td>
+		<td class="view-total">111,267,550,754</td>
+		<td class="res-total">5,818,489,964</td>
+	</tr>
+	<tr id="d2020061606" class="wo me">
+		<td class="date" id="d20200616"><a href="total/202006#d16">2020年06月16日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-06-16 06:00:00">6時</td>
+		<td class="video-total-diff">2,418</td>
+		<td class="view-total-diff">19,870,115</td>
+		<td class="res-total-diff">437,754</td>
+		<td class="video-total">17,639,884</td>
+		<td class="view-total">111,246,547,324</td>
+		<td class="res-total">5,818,000,598</td>
+	</tr>
+	<tr id="d2020061506" class="we me">
+		<td class="date" id="d20200615"><a href="total/202006#d15">2020年06月15日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-06-15 06:00:00">6時</td>
+		<td class="video-total-diff">4,345</td>
+		<td class="view-total-diff">27,335,897</td>
+		<td class="res-total-diff">646,186</td>
+		<td class="video-total">17,637,466</td>
+		<td class="view-total">111,226,677,209</td>
+		<td class="res-total">5,817,562,844</td>
+	</tr>
+	<tr id="d2020061406" class="we me">
+		<td class="date" id="d20200614"><a href="total/202006#d14">2020年06月14日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-06-14 06:00:00">6時</td>
+		<td class="video-total-diff">4,330</td>
+		<td class="view-total-diff">28,893,795</td>
+		<td class="res-total-diff">599,789</td>
+		<td class="video-total">17,633,121</td>
+		<td class="view-total">111,199,341,312</td>
+		<td class="res-total">5,816,916,658</td>
+	</tr>
+	<tr id="d2020061306" class="we me">
+		<td class="date" id="d20200613"><a href="total/202006#d13">2020年06月13日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-06-13 06:00:00">6時</td>
+		<td class="video-total-diff">3,016</td>
+		<td class="view-total-diff">20,564,531</td>
+		<td class="res-total-diff">457,960</td>
+		<td class="video-total">17,628,791</td>
+		<td class="view-total">111,170,447,517</td>
+		<td class="res-total">5,816,316,869</td>
+	</tr>
+	<tr id="d2020061206" class="we me">
+		<td class="date" id="d20200612"><a href="total/202006#d12">2020年06月12日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-06-12 06:00:00">6時</td>
+		<td class="video-total-diff">3,003</td>
+		<td class="view-total-diff">23,238,109</td>
+		<td class="res-total-diff">429,766</td>
+		<td class="video-total">17,625,775</td>
+		<td class="view-total">111,149,882,986</td>
+		<td class="res-total">5,815,858,909</td>
+	</tr>
+	<tr id="d2020061106" class="we me">
+		<td class="date" id="d20200611"><a href="total/202006#d11">2020年06月11日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-06-11 06:00:00">6時</td>
+		<td class="video-total-diff">2,893</td>
+		<td class="view-total-diff">23,960,584</td>
+		<td class="res-total-diff">481,053</td>
+		<td class="video-total">17,622,772</td>
+		<td class="view-total">111,126,644,877</td>
+		<td class="res-total">5,815,429,143</td>
+	</tr>
+	<tr id="d2020061006" class="we me">
+		<td class="date" id="d20200610"><a href="total/202006#d10">2020年06月10日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-06-10 06:00:00">6時</td>
+		<td class="video-total-diff">3,012</td>
+		<td class="view-total-diff">18,954,446</td>
+		<td class="res-total-diff">491,188</td>
+		<td class="video-total">17,619,879</td>
+		<td class="view-total">111,102,684,293</td>
+		<td class="res-total">5,814,948,090</td>
+	</tr>
+	<tr id="d2020060906" class="we me">
+		<td class="date" id="d20200609"><a href="total/202006#d09">2020年06月09日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-06-09 06:00:00">6時</td>
+		<td class="video-total-diff">2,405</td>
+		<td class="view-total-diff">20,111,895</td>
+		<td class="res-total-diff">430,216</td>
+		<td class="video-total">17,616,867</td>
+		<td class="view-total">111,083,729,847</td>
+		<td class="res-total">5,814,456,902</td>
+	</tr>
+	<tr id="d2020060806" class="wo me">
+		<td class="date" id="d20200608"><a href="total/202006#d08">2020年06月08日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-06-08 06:00:00">6時</td>
+		<td class="video-total-diff">4,062</td>
+		<td class="view-total-diff">26,698,155</td>
+		<td class="res-total-diff">625,878</td>
+		<td class="video-total">17,614,462</td>
+		<td class="view-total">111,063,617,952</td>
+		<td class="res-total">5,814,026,686</td>
+	</tr>
+	<tr id="d2020060706" class="wo me">
+		<td class="date" id="d20200607"><a href="total/202006#d07">2020年06月07日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-06-07 06:00:00">6時</td>
+		<td class="video-total-diff">4,290</td>
+		<td class="view-total-diff">24,670,580</td>
+		<td class="res-total-diff">653,015</td>
+		<td class="video-total">17,610,400</td>
+		<td class="view-total">111,036,919,797</td>
+		<td class="res-total">5,813,400,808</td>
+	</tr>
+	<tr id="d2020060606" class="wo me">
+		<td class="date" id="d20200606"><a href="total/202006#d06">2020年06月06日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-06-06 06:00:00">6時</td>
+		<td class="video-total-diff">2,200</td>
+		<td class="view-total-diff">14,304,150</td>
+		<td class="res-total-diff">514,834</td>
+		<td class="video-total">17,606,110</td>
+		<td class="view-total">111,012,249,217</td>
+		<td class="res-total">5,812,747,793</td>
+	</tr>
+	<tr id="d2020060506" class="wo me">
+		<td class="date" id="d20200605"><a href="total/202006#d05">2020年06月05日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-06-05 06:00:00">6時</td>
+		<td class="video-total-diff">2,126</td>
+		<td class="view-total-diff">18,506,337</td>
+		<td class="res-total-diff">492,758</td>
+		<td class="video-total">17,603,910</td>
+		<td class="view-total">110,997,945,067</td>
+		<td class="res-total">5,812,232,959</td>
+	</tr>
+	<tr id="d2020060406" class="wo me">
+		<td class="date" id="d20200604"><a href="total/202006#d04">2020年06月04日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-06-04 06:00:00">6時</td>
+		<td class="video-total-diff">3,120</td>
+		<td class="view-total-diff">19,933,244</td>
+		<td class="res-total-diff">645,028</td>
+		<td class="video-total">17,601,784</td>
+		<td class="view-total">110,979,438,730</td>
+		<td class="res-total">5,811,740,201</td>
+	</tr>
+	<tr id="d2020060306" class="wo me">
+		<td class="date" id="d20200603"><a href="total/202006#d03">2020年06月03日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-06-03 06:00:00">6時</td>
+		<td class="video-total-diff">2,951</td>
+		<td class="view-total-diff">19,614,000</td>
+		<td class="res-total-diff">629,694</td>
+		<td class="video-total">17,598,664</td>
+		<td class="view-total">110,959,505,486</td>
+		<td class="res-total">5,811,095,173</td>
+	</tr>
+	<tr id="d2020060206" class="wo me">
+		<td class="date" id="d20200602"><a href="total/202006#d02">2020年06月02日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-06-02 06:00:00">6時</td>
+		<td class="video-total-diff">2,814</td>
+		<td class="view-total-diff">18,410,675</td>
+		<td class="res-total-diff">466,081</td>
+		<td class="video-total">17,595,713</td>
+		<td class="view-total">110,939,891,486</td>
+		<td class="res-total">5,810,465,479</td>
+	</tr>
+	<tr id="d2020060106" class="we mo">
+		<td class="date" id="d20200601"><a href="total/202006#d01">2020年06月01日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-06-01 06:00:00">6時</td>
+		<td class="video-total-diff">1,588</td>
+		<td class="view-total-diff">24,870,231</td>
+		<td class="res-total-diff">803,207</td>
+		<td class="video-total">17,592,899</td>
+		<td class="view-total">110,921,480,811</td>
+		<td class="res-total">5,809,999,398</td>
+	</tr>
+	<tr id="d2020053106" class="we mo">
+		<td class="date" id="d20200531"><a href="total/202005#d31">2020年05月31日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-05-31 06:00:01">6時</td>
+		<td class="video-total-diff">3,781</td>
+		<td class="view-total-diff">26,410,823</td>
+		<td class="res-total-diff">632,252</td>
+		<td class="video-total">17,591,311</td>
+		<td class="view-total">110,896,610,580</td>
+		<td class="res-total">5,809,196,191</td>
+	</tr>
+	<tr id="d2020053006" class="we mo">
+		<td class="date" id="d20200530"><a href="total/202005#d30">2020年05月30日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-05-30 06:00:01">6時</td>
+		<td class="video-total-diff">3,221</td>
+		<td class="view-total-diff">21,301,506</td>
+		<td class="res-total-diff">540,599</td>
+		<td class="video-total">17,587,530</td>
+		<td class="view-total">110,870,199,757</td>
+		<td class="res-total">5,808,563,939</td>
+	</tr>
+	<tr id="d2020052906" class="we mo">
+		<td class="date" id="d20200529"><a href="total/202005#d29">2020年05月29日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-05-29 06:00:00">6時</td>
+		<td class="video-total-diff">2,718</td>
+		<td class="view-total-diff">16,934,546</td>
+		<td class="res-total-diff">478,654</td>
+		<td class="video-total">17,584,309</td>
+		<td class="view-total">110,848,898,251</td>
+		<td class="res-total">5,808,023,340</td>
+	</tr>
+	<tr id="d2020052806" class="we mo">
+		<td class="date" id="d20200528"><a href="total/202005#d28">2020年05月28日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-05-28 06:00:00">6時</td>
+		<td class="video-total-diff">2,744</td>
+		<td class="view-total-diff">17,877,645</td>
+		<td class="res-total-diff">484,956</td>
+		<td class="video-total">17,581,591</td>
+		<td class="view-total">110,831,963,705</td>
+		<td class="res-total">5,807,544,686</td>
+	</tr>
+	<tr id="d2020052706" class="we mo">
+		<td class="date" id="d20200527"><a href="total/202005#d27">2020年05月27日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-05-27 06:00:00">6時</td>
+		<td class="video-total-diff">2,696</td>
+		<td class="view-total-diff">21,396,302</td>
+		<td class="res-total-diff">554,937</td>
+		<td class="video-total">17,578,847</td>
+		<td class="view-total">110,814,086,060</td>
+		<td class="res-total">5,807,059,730</td>
+	</tr>
+	<tr id="d2020052606" class="we mo">
+		<td class="date" id="d20200526"><a href="total/202005#d26">2020年05月26日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-05-26 06:00:00">6時</td>
+		<td class="video-total-diff">2,310</td>
+		<td class="view-total-diff">19,508,108</td>
+		<td class="res-total-diff">508,138</td>
+		<td class="video-total">17,576,151</td>
+		<td class="view-total">110,792,689,758</td>
+		<td class="res-total">5,806,504,793</td>
+	</tr>
+	<tr id="d2020052506" class="wo mo">
+		<td class="date" id="d20200525"><a href="total/202005#d25">2020年05月25日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-05-25 06:00:00">6時</td>
+		<td class="video-total-diff">4,033</td>
+		<td class="view-total-diff">27,027,713</td>
+		<td class="res-total-diff">683,994</td>
+		<td class="video-total">17,573,841</td>
+		<td class="view-total">110,773,181,650</td>
+		<td class="res-total">5,805,996,655</td>
+	</tr>
+	<tr id="d2020052406" class="wo mo">
+		<td class="date" id="d20200524"><a href="total/202005#d24">2020年05月24日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-05-24 06:00:00">6時</td>
+		<td class="video-total-diff">3,212</td>
+		<td class="view-total-diff">27,967,427</td>
+		<td class="res-total-diff">619,697</td>
+		<td class="video-total">17,569,808</td>
+		<td class="view-total">110,746,153,937</td>
+		<td class="res-total">5,805,312,661</td>
+	</tr>
+	<tr id="d2020052306" class="wo mo">
+		<td class="date" id="d20200523"><a href="total/202005#d23">2020年05月23日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-05-23 06:00:00">6時</td>
+		<td class="video-total-diff">2,572</td>
+		<td class="view-total-diff">20,712,727</td>
+		<td class="res-total-diff">607,822</td>
+		<td class="video-total">17,566,596</td>
+		<td class="view-total">110,718,186,510</td>
+		<td class="res-total">5,804,692,964</td>
+	</tr>
+	<tr id="d2020052206" class="wo mo">
+		<td class="date" id="d20200522"><a href="total/202005#d22">2020年05月22日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-05-22 06:00:00">6時</td>
+		<td class="video-total-diff">3,044</td>
+		<td class="view-total-diff">24,009,725</td>
+		<td class="res-total-diff">594,408</td>
+		<td class="video-total">17,564,024</td>
+		<td class="view-total">110,697,473,783</td>
+		<td class="res-total">5,804,085,142</td>
+	</tr>
+	<tr id="d2020052106" class="wo mo">
+		<td class="date" id="d20200521"><a href="total/202005#d21">2020年05月21日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-05-21 06:00:00">6時</td>
+		<td class="video-total-diff">2,625</td>
+		<td class="view-total-diff">13,781,157</td>
+		<td class="res-total-diff">632,143</td>
+		<td class="video-total">17,560,980</td>
+		<td class="view-total">110,673,464,058</td>
+		<td class="res-total">5,803,490,734</td>
+	</tr>
+	<tr id="d2020052006" class="wo mo">
+		<td class="date" id="d20200520"><a href="total/202005#d20">2020年05月20日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-05-20 06:00:00">6時</td>
+		<td class="video-total-diff">2,833</td>
+		<td class="view-total-diff">21,582,164</td>
+		<td class="res-total-diff">563,055</td>
+		<td class="video-total">17,558,355</td>
+		<td class="view-total">110,659,682,901</td>
+		<td class="res-total">5,802,858,591</td>
+	</tr>
+	<tr id="d2020051906" class="wo mo">
+		<td class="date" id="d20200519"><a href="total/202005#d19">2020年05月19日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-05-19 06:00:01">6時</td>
+		<td class="video-total-diff">1,994</td>
+		<td class="view-total-diff">19,616,197</td>
+		<td class="res-total-diff">545,813</td>
+		<td class="video-total">17,555,522</td>
+		<td class="view-total">110,638,100,737</td>
+		<td class="res-total">5,802,295,536</td>
+	</tr>
+	<tr id="d2020051806" class="we mo">
+		<td class="date" id="d20200518"><a href="total/202005#d18">2020年05月18日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-05-18 06:00:00">6時</td>
+		<td class="video-total-diff">3,963</td>
+		<td class="view-total-diff">27,133,176</td>
+		<td class="res-total-diff">657,507</td>
+		<td class="video-total">17,553,528</td>
+		<td class="view-total">110,618,484,540</td>
+		<td class="res-total">5,801,749,723</td>
+	</tr>
+	<tr id="d2020051706" class="we mo">
+		<td class="date" id="d20200517"><a href="total/202005#d17">2020年05月17日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-05-17 06:00:00">6時</td>
+		<td class="video-total-diff">3,844</td>
+		<td class="view-total-diff">25,183,715</td>
+		<td class="res-total-diff">607,897</td>
+		<td class="video-total">17,549,565</td>
+		<td class="view-total">110,591,351,364</td>
+		<td class="res-total">5,801,092,216</td>
+	</tr>
+	<tr id="d2020051606" class="we mo">
+		<td class="date" id="d20200516"><a href="total/202005#d16">2020年05月16日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-05-16 06:00:00">6時</td>
+		<td class="video-total-diff">3,576</td>
+		<td class="view-total-diff">12,968,557</td>
+		<td class="res-total-diff">537,237</td>
+		<td class="video-total">17,545,721</td>
+		<td class="view-total">110,566,167,649</td>
+		<td class="res-total">5,800,484,319</td>
+	</tr>
+	<tr id="d2020051506" class="we mo">
+		<td class="date" id="d20200515"><a href="total/202005#d15">2020年05月15日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-05-15 06:00:00">6時</td>
+		<td class="video-total-diff">2,681</td>
+		<td class="view-total-diff">12,764,767</td>
+		<td class="res-total-diff">528,958</td>
+		<td class="video-total">17,542,145</td>
+		<td class="view-total">110,553,199,092</td>
+		<td class="res-total">5,799,947,082</td>
+	</tr>
+	<tr id="d2020051406" class="we mo">
+		<td class="date" id="d20200514"><a href="total/202005#d14">2020年05月14日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-05-14 06:00:00">6時</td>
+		<td class="video-total-diff">2,978</td>
+		<td class="view-total-diff">22,191,122</td>
+		<td class="res-total-diff">633,377</td>
+		<td class="video-total">17,539,464</td>
+		<td class="view-total">110,540,434,325</td>
+		<td class="res-total">5,799,418,124</td>
+	</tr>
+	<tr id="d2020051306" class="we mo">
+		<td class="date" id="d20200513"><a href="total/202005#d13">2020年05月13日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-05-13 06:00:00">6時</td>
+		<td class="video-total-diff">2,396</td>
+		<td class="view-total-diff">22,731,303</td>
+		<td class="res-total-diff">563,309</td>
+		<td class="video-total">17,536,486</td>
+		<td class="view-total">110,518,243,203</td>
+		<td class="res-total">5,798,784,747</td>
+	</tr>
+	<tr id="d2020051206" class="we mo">
+		<td class="date" id="d20200512"><a href="total/202005#d12">2020年05月12日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-05-12 06:00:00">6時</td>
+		<td class="video-total-diff">2,868</td>
+		<td class="view-total-diff">22,639,817</td>
+		<td class="res-total-diff">555,882</td>
+		<td class="video-total">17,534,090</td>
+		<td class="view-total">110,495,511,900</td>
+		<td class="res-total">5,798,221,438</td>
+	</tr>
+	<tr id="d2020051106" class="wo mo">
+		<td class="date" id="d20200511"><a href="total/202005#d11">2020年05月11日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-05-11 06:00:01">6時</td>
+		<td class="video-total-diff">3,956</td>
+		<td class="view-total-diff">27,384,322</td>
+		<td class="res-total-diff">574,716</td>
+		<td class="video-total">17,531,222</td>
+		<td class="view-total">110,472,872,083</td>
+		<td class="res-total">5,797,665,556</td>
+	</tr>
+	<tr id="d2020051006" class="wo mo">
+		<td class="date" id="d20200510"><a href="total/202005#d10">2020年05月10日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-05-10 06:00:00">6時</td>
+		<td class="video-total-diff">2,094</td>
+		<td class="view-total-diff">24,792,094</td>
+		<td class="res-total-diff">561,961</td>
+		<td class="video-total">17,527,266</td>
+		<td class="view-total">110,445,487,761</td>
+		<td class="res-total">5,797,090,840</td>
+	</tr>
+	<tr id="d2020050906" class="wo mo">
+		<td class="date" id="d20200509"><a href="total/202005#d09">2020年05月09日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-05-09 06:00:00">6時</td>
+		<td class="video-total-diff">3,585</td>
+		<td class="view-total-diff">24,383,904</td>
+		<td class="res-total-diff">594,297</td>
+		<td class="video-total">17,525,172</td>
+		<td class="view-total">110,420,695,667</td>
+		<td class="res-total">5,796,528,879</td>
+	</tr>
+	<tr id="d2020050806" class="wo mo">
+		<td class="date" id="d20200508"><a href="total/202005#d08">2020年05月08日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-05-08 06:00:00">6時</td>
+		<td class="video-total-diff">3,071</td>
+		<td class="view-total-diff">20,003,769</td>
+		<td class="res-total-diff">540,925</td>
+		<td class="video-total">17,521,587</td>
+		<td class="view-total">110,396,311,763</td>
+		<td class="res-total">5,795,934,582</td>
+	</tr>
+	<tr id="d2020050706" class="wo mo">
+		<td class="date" id="d20200507"><a href="total/202005#d07">2020年05月07日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-05-07 06:00:00">6時</td>
+		<td class="video-total-diff">3,686</td>
+		<td class="view-total-diff">27,819,502</td>
+		<td class="res-total-diff">731,143</td>
+		<td class="video-total">17,518,516</td>
+		<td class="view-total">110,376,307,994</td>
+		<td class="res-total">5,795,393,657</td>
+	</tr>
+	<tr id="d2020050606" class="wo mo">
+		<td class="date" id="d20200506"><a href="total/202005#d06">2020年05月06日(<span class="wed holiday" title="振替">水</span>)</a></td>
+		<td class="hour" title="2020-05-06 06:00:00">6時</td>
+		<td class="video-total-diff">4,412</td>
+		<td class="view-total-diff">28,213,210</td>
+		<td class="res-total-diff">671,721</td>
+		<td class="video-total">17,514,830</td>
+		<td class="view-total">110,348,488,492</td>
+		<td class="res-total">5,794,662,514</td>
+	</tr>
+	<tr id="d2020050506" class="wo mo">
+		<td class="date" id="d20200505"><a href="total/202005#d05">2020年05月05日(<span class="tue holiday" title="こどもの日">火</span>)</a></td>
+		<td class="hour" title="2020-05-05 06:00:00">6時</td>
+		<td class="video-total-diff">4,004</td>
+		<td class="view-total-diff">28,249,165</td>
+		<td class="res-total-diff">580,189</td>
+		<td class="video-total">17,510,418</td>
+		<td class="view-total">110,320,275,282</td>
+		<td class="res-total">5,793,990,793</td>
+	</tr>
+	<tr id="d2020050406" class="we mo">
+		<td class="date" id="d20200504"><a href="total/202005#d04">2020年05月04日(<span class="mon holiday" title="みどりの日">月</span>)</a></td>
+		<td class="hour" title="2020-05-04 06:00:00">6時</td>
+		<td class="video-total-diff">3,793</td>
+		<td class="view-total-diff">23,279,780</td>
+		<td class="res-total-diff">609,565</td>
+		<td class="video-total">17,506,414</td>
+		<td class="view-total">110,292,026,117</td>
+		<td class="res-total">5,793,410,604</td>
+	</tr>
+	<tr id="d2020050306" class="we mo">
+		<td class="date" id="d20200503"><a href="total/202005#d03">2020年05月03日(<span class="sun holiday" title="憲法記念日">日</span>)</a></td>
+		<td class="hour" title="2020-05-03 06:00:00">6時</td>
+		<td class="video-total-diff">4,687</td>
+		<td class="view-total-diff">26,859,857</td>
+		<td class="res-total-diff">590,139</td>
+		<td class="video-total">17,502,621</td>
+		<td class="view-total">110,268,746,337</td>
+		<td class="res-total">5,792,801,039</td>
+	</tr>
+	<tr id="d2020050206" class="we mo">
+		<td class="date" id="d20200502"><a href="total/202005#d02">2020年05月02日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-05-02 06:00:00">6時</td>
+		<td class="video-total-diff">4,140</td>
+		<td class="view-total-diff">20,253,400</td>
+		<td class="res-total-diff">571,945</td>
+		<td class="video-total">17,497,934</td>
+		<td class="view-total">110,241,886,480</td>
+		<td class="res-total">5,792,210,900</td>
+	</tr>
+	<tr id="d2020050106" class="we me">
+		<td class="date" id="d20200501"><a href="total/202005#d01">2020年05月01日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-05-01 06:00:00">6時</td>
+		<td class="video-total-diff">2,997</td>
+		<td class="view-total-diff">19,709,643</td>
+		<td class="res-total-diff">583,943</td>
+		<td class="video-total">17,493,794</td>
+		<td class="view-total">110,221,633,080</td>
+		<td class="res-total">5,791,638,955</td>
+	</tr>
+	<tr id="d2020043006" class="we me">
+		<td class="date" id="d20200430"><a href="total/202004#d30">2020年04月30日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-04-30 06:00:00">6時</td>
+		<td class="video-total-diff">3,675</td>
+		<td class="view-total-diff">20,653,136</td>
+		<td class="res-total-diff">590,342</td>
+		<td class="video-total">17,490,797</td>
+		<td class="view-total">110,201,923,437</td>
+		<td class="res-total">5,791,055,012</td>
+	</tr>
+	<tr id="d2020042906" class="we me">
+		<td class="date" id="d20200429"><a href="total/202004#d29">2020年04月29日(<span class="wed holiday" title="昭和の日">水</span>)</a></td>
+		<td class="hour" title="2020-04-29 06:00:00">6時</td>
+		<td class="video-total-diff">2,877</td>
+		<td class="view-total-diff">22,608,865</td>
+		<td class="res-total-diff">533,945</td>
+		<td class="video-total">17,487,122</td>
+		<td class="view-total">110,181,270,301</td>
+		<td class="res-total">5,790,464,670</td>
+	</tr>
+	<tr id="d2020042806" class="we me">
+		<td class="date" id="d20200428"><a href="total/202004#d28">2020年04月28日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-04-28 06:00:00">6時</td>
+		<td class="video-total-diff">3,109</td>
+		<td class="view-total-diff">22,836,841</td>
+		<td class="res-total-diff">536,696</td>
+		<td class="video-total">17,484,245</td>
+		<td class="view-total">110,158,661,436</td>
+		<td class="res-total">5,789,930,725</td>
+	</tr>
+	<tr id="d2020042706" class="wo me">
+		<td class="date" id="d20200427"><a href="total/202004#d27">2020年04月27日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-04-27 06:00:00">6時</td>
+		<td class="video-total-diff">3,457</td>
+		<td class="view-total-diff">22,868,736</td>
+		<td class="res-total-diff">604,612</td>
+		<td class="video-total">17,481,136</td>
+		<td class="view-total">110,135,824,595</td>
+		<td class="res-total">5,789,394,029</td>
+	</tr>
+	<tr id="d2020042606" class="wo me">
+		<td class="date" id="d20200426"><a href="total/202004#d26">2020年04月26日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-04-26 06:00:00">6時</td>
+		<td class="video-total-diff">4,618</td>
+		<td class="view-total-diff">28,261,831</td>
+		<td class="res-total-diff">547,695</td>
+		<td class="video-total">17,477,679</td>
+		<td class="view-total">110,112,955,859</td>
+		<td class="res-total">5,788,789,417</td>
+	</tr>
+	<tr id="d2020042506" class="wo me">
+		<td class="date" id="d20200425"><a href="total/202004#d25">2020年04月25日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-04-25 06:00:00">6時</td>
+		<td class="video-total-diff">4,619</td>
+		<td class="view-total-diff">13,337,954</td>
+		<td class="res-total-diff">524,559</td>
+		<td class="video-total">17,473,061</td>
+		<td class="view-total">110,084,694,028</td>
+		<td class="res-total">5,788,241,722</td>
+	</tr>
+	<tr id="d2020042406" class="wo me">
+		<td class="date" id="d20200424"><a href="total/202004#d24">2020年04月24日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-04-24 06:00:00">6時</td>
+		<td class="video-total-diff">2,881</td>
+		<td class="view-total-diff">23,094,073</td>
+		<td class="res-total-diff">476,811</td>
+		<td class="video-total">17,468,442</td>
+		<td class="view-total">110,071,356,074</td>
+		<td class="res-total">5,787,717,163</td>
+	</tr>
+	<tr id="d2020042306" class="wo me">
+		<td class="date" id="d20200423"><a href="total/202004#d23">2020年04月23日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-04-23 06:00:00">6時</td>
+		<td class="video-total-diff">3,407</td>
+		<td class="view-total-diff">21,443,948</td>
+		<td class="res-total-diff">529,159</td>
+		<td class="video-total">17,465,561</td>
+		<td class="view-total">110,048,262,001</td>
+		<td class="res-total">5,787,240,352</td>
+	</tr>
+	<tr id="d2020042206" class="wo me">
+		<td class="date" id="d20200422"><a href="total/202004#d22">2020年04月22日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-04-22 06:00:00">6時</td>
+		<td class="video-total-diff">3,420</td>
+		<td class="view-total-diff">24,823,105</td>
+		<td class="res-total-diff">524,821</td>
+		<td class="video-total">17,462,154</td>
+		<td class="view-total">110,026,818,053</td>
+		<td class="res-total">5,786,711,193</td>
+	</tr>
+	<tr id="d2020042106" class="wo me">
+		<td class="date" id="d20200421"><a href="total/202004#d21">2020年04月21日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-04-21 06:00:00">6時</td>
+		<td class="video-total-diff">2,618</td>
+		<td class="view-total-diff">20,684,127</td>
+		<td class="res-total-diff">688,707</td>
+		<td class="video-total">17,458,734</td>
+		<td class="view-total">110,001,994,948</td>
+		<td class="res-total">5,786,186,372</td>
+	</tr>
+	<tr id="d2020042006" class="we me">
+		<td class="date" id="d20200420"><a href="total/202004#d20">2020年04月20日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-04-20 06:00:00">6時</td>
+		<td class="video-total-diff">3,534</td>
+		<td class="view-total-diff">26,114,113</td>
+		<td class="res-total-diff">540,750</td>
+		<td class="video-total">17,456,116</td>
+		<td class="view-total">109,981,310,821</td>
+		<td class="res-total">5,785,497,665</td>
+	</tr>
+	<tr id="d2020041906" class="we me">
+		<td class="date" id="d20200419"><a href="total/202004#d19">2020年04月19日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-04-19 06:00:00">6時</td>
+		<td class="video-total-diff">3,678</td>
+		<td class="view-total-diff">24,875,058</td>
+		<td class="res-total-diff">577,099</td>
+		<td class="video-total">17,452,582</td>
+		<td class="view-total">109,955,196,708</td>
+		<td class="res-total">5,784,956,915</td>
+	</tr>
+	<tr id="d2020041806" class="we me">
+		<td class="date" id="d20200418"><a href="total/202004#d18">2020年04月18日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-04-18 06:00:00">6時</td>
+		<td class="video-total-diff">4,020</td>
+		<td class="view-total-diff">23,151,972</td>
+		<td class="res-total-diff">477,568</td>
+		<td class="video-total">17,448,904</td>
+		<td class="view-total">109,930,321,650</td>
+		<td class="res-total">5,784,379,816</td>
+	</tr>
+	<tr id="d2020041706" class="we me">
+		<td class="date" id="d20200417"><a href="total/202004#d17">2020年04月17日(<span class="fri">金</span>)</a></td>
+		<td class="hour" title="2020-04-17 06:00:00">6時</td>
+		<td class="video-total-diff">2,914</td>
+		<td class="view-total-diff">22,393,713</td>
+		<td class="res-total-diff">472,449</td>
+		<td class="video-total">17,444,884</td>
+		<td class="view-total">109,907,169,678</td>
+		<td class="res-total">5,783,902,248</td>
+	</tr>
+	<tr id="d2020041606" class="we me">
+		<td class="date" id="d20200416"><a href="total/202004#d16">2020年04月16日(<span class="thu">木</span>)</a></td>
+		<td class="hour" title="2020-04-16 06:00:00">6時</td>
+		<td class="video-total-diff">2,523</td>
+		<td class="view-total-diff">21,000,928</td>
+		<td class="res-total-diff">486,276</td>
+		<td class="video-total">17,441,970</td>
+		<td class="view-total">109,884,775,965</td>
+		<td class="res-total">5,783,429,799</td>
+	</tr>
+	<tr id="d2020041506" class="we me">
+		<td class="date" id="d20200415"><a href="total/202004#d15">2020年04月15日(<span class="wed">水</span>)</a></td>
+		<td class="hour" title="2020-04-15 06:00:00">6時</td>
+		<td class="video-total-diff">3,153</td>
+		<td class="view-total-diff">16,171,259</td>
+		<td class="res-total-diff">489,826</td>
+		<td class="video-total">17,439,447</td>
+		<td class="view-total">109,863,775,037</td>
+		<td class="res-total">5,782,943,523</td>
+	</tr>
+	<tr id="d2020041406" class="we me">
+		<td class="date" id="d20200414"><a href="total/202004#d14">2020年04月14日(<span class="tue">火</span>)</a></td>
+		<td class="hour" title="2020-04-14 06:00:00">6時</td>
+		<td class="video-total-diff">2,763</td>
+		<td class="view-total-diff">21,973,676</td>
+		<td class="res-total-diff">579,366</td>
+		<td class="video-total">17,436,294</td>
+		<td class="view-total">109,847,603,778</td>
+		<td class="res-total">5,782,453,697</td>
+	</tr>
+	<tr id="d2020041306" class="wo me">
+		<td class="date" id="d20200413"><a href="total/202004#d13">2020年04月13日(<span class="mon">月</span>)</a></td>
+		<td class="hour" title="2020-04-13 06:00:00">6時</td>
+		<td class="video-total-diff">4,246</td>
+		<td class="view-total-diff">26,017,083</td>
+		<td class="res-total-diff">600,182</td>
+		<td class="video-total">17,433,531</td>
+		<td class="view-total">109,825,630,102</td>
+		<td class="res-total">5,781,874,331</td>
+	</tr>
+	<tr id="d2020041206" class="wo me">
+		<td class="date" id="d20200412"><a href="total/202004#d12">2020年04月12日(<span class="sun">日</span>)</a></td>
+		<td class="hour" title="2020-04-12 06:00:00">6時</td>
+		<td class="video-total-diff">4,281</td>
+		<td class="view-total-diff">27,830,761</td>
+		<td class="res-total-diff">589,113</td>
+		<td class="video-total">17,429,285</td>
+		<td class="view-total">109,799,613,019</td>
+		<td class="res-total">5,781,274,149</td>
+	</tr>
+	<tr id="d2020041106" class="wo me">
+		<td class="date" id="d20200411"><a href="total/202004#d11">2020年04月11日(<span class="sat">土</span>)</a></td>
+		<td class="hour" title="2020-04-11 06:00:00">6時</td>
+		<td class="video-total-diff">3,427</td>
+		<td class="view-total-diff">22,462,878</td>
+		<td class="res-total-diff">523,449</td>
+		<td class="video-total">17,425,004</td>
+		<td class="view-total">109,771,782,258</td>
+		<td class="res-total">5,780,685,036</td>
+	</tr>
+	</table>
+	<button class="async-load" disabled="disabled">JavaScriptを有効にして下さい</button>
+</div>
+<div class="calendar-option">
+	<ul class="option-menu">
+	<li class="year"><ul>
+		<li><a href="total/200710">2007年</a></li>
+		<li><a href="total/200810">2008年</a></li>
+		<li><a href="total/200910">2009年</a></li>
+		<li><a href="total/201010">2010年</a></li>
+		<li><a href="total/201110">2011年</a></li>
+		<li><a href="total/201210">2012年</a></li>
+		<li><a href="total/201310">2013年</a></li>
+		<li><a href="total/201410">2014年</a></li>
+		<li><a href="total/201510">2015年</a></li>
+		<li><a href="total/201610">2016年</a></li>
+		<li><a href="total/201710">2017年</a></li>
+		<li><a href="total/201810">2018年</a></li>
+		<li><a href="total/201910">2019年</a></li>
+		<li><em>2020年</em></li>
+	</ul></li>
+	<li class="month"><ul>
+		<li><a href="total/202001">01月</a></li>
+		<li><a href="total/202002">02月</a></li>
+		<li><a href="total/202003">03月</a></li>
+		<li><a href="total/202004">04月</a></li>
+		<li><a href="total/202005">05月</a></li>
+		<li><a href="total/202006">06月</a></li>
+		<li><a href="total/202007">07月</a></li>
+		<li><a href="total/202008">08月</a></li>
+		<li><a href="total/202009">09月</a></li>
+		<li><a href="total/202010">10月</a></li>
+		<li><span class="nothing">11月</span></li>
+		<li><span class="nothing">12月</span></li>
+	</ul></li>
+	</ul>
+</div>
+<div id="download">
+	<h2>データファイル</h2>
+<div class="tsv">
+	<h3>TSV</h3>
+	<p>
+		<a href="total/all.tsv" class="download" rel="nofollow">all.tsv</a><br />
+			タブ区切り形式で提供するこのページのデータです。<br />
+			左から [日付] [時] [取得エポック秒] [総動画数] [総再生数] [総コメント数] のカラムになります。<br />
+	</p>
+</div>
+<div class="zip">
+	<h3>ZIP</h3>
+	<p>
+		<a href="total/all.zip" class="download" rel="nofollow">all.zip</a> (約6.60MB)<br />
+			総合カウントの全てのHTMLとTSVをまとめて圧縮したZIP形式のデータです。<br />
+	</p>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-nav">
+	<h2>ナビゲーション</h2>
+	<ul>
+		<li><a href="http://www.nicochart.jp/">トップページ</a></li>
+		<li><a href="http://www.nicochart.jp/archive/">過去のランキング</a><ul>
+			<li><a href="http://www.nicochart.jp/ranking/">デイリーランキング</a></li>
+			<li><a href="http://www.nicochart.jp/ranking/total">合計ランキング</a></li>
+			<li><a href="http://www.nicochart.jp/top3/">トップチャート</a></li>
+			<li><a href="http://www.nicochart.jp/matrix/">グループマトリクス</a></li>
+		</ul></li>
+		<li><a href="http://now.nicochart.jp/now/">現在のランキング</a><ul>
+			<li><a href="http://now.nicochart.jp/today/">本日</a> … 積立式デイリーランキング</li>
+			<li><a href="http://now.nicochart.jp/hourly/">毎時</a> … 毎時ランキング</li>
+			<li><a href="http://now.nicochart.jp/newarrival/">新着</a> … 新着動画ランキング</li>
+			<li><a href="http://now.nicochart.jp/latest/">24時間</a> … 最新24時間ランキング</li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/other/">その他のランキング</a><ul>
+			<li><a href="http://www.nicochart.jp/stamp_ranking/">スタンプランキング</a></li>
+		</ul></li>
+		<li><a href="http://www.nicochart.jp/service/">データサービス</a></li>
+		<li><a href="http://www.nicochart.jp/about/">このサイトについて</a></li>
+	</ul>
+</div>
+<div id="footer-form">
+	<form action="http://www.nicochart.jp/redirect" method="get">
+	<h2>動画情報検索</h2>
+	<ul>
+		<li class="radio-s"><input type="radio" class="radio" name="mode" value="s" id="footer-form-s" checked="checked" /><label for="footer-form-s">キーワード検索</label></li>
+		<li class="radio-u"><input type="radio" class="radio" name="mode" value="u" id="footer-form-u" /><label for="footer-form-u">ユーザーID検索</label></li>
+		<li class="radio-t"><input type="radio" class="radio" name="mode" value="t" id="footer-form-t" /><label for="footer-form-t">タグ検索</label></li>
+		<li class="radio-rt"><input type="radio" class="radio" name="mode" value="related_tag" id="footer-form-rt" /><label for="footer-form-rt">含むタグ検索</label></li>
+		<li class="radio-n"><input type="radio" class="radio" name="mode" value="n" id="footer-form-n" /><label for="footer-form-n">ニックネーム検索</label></li>
+		<li class="radio-rn"><input type="radio" class="radio" name="mode" value="related_name" id="footer-form-rn" /><label for="footer-form-rn">含むニックネーム検索</label></li>
+		<li class="radio-r"><input type="radio" class="radio" name="mode" value="r" id="footer-form-r" /><label for="footer-form-r">権利名検索</label></li>
+		<li class="radio-rr"><input type="radio" class="radio" name="mode" value="related_right" id="footer-form-rr" /><label for="footer-form-rr">含む権利名検索</label></li>
+	</ul>
+	<p>
+		<input type="text" class="text" name="path" value="" />
+		<input type="submit" class="button" value="検索" />
+	</p>
+	</form>
+<div id="footer-info">
+	<h2>市場ランキング</h2>
+	<noscript><p>JavaScriptを有効にして下さい</p></noscript>
+</div>
+</div>
+<div id="niconico-series">
+	<h2>公式サイトへのリンク</h2>
+	<ul class="nicovideo-link">
+		<li><a href="https://www.nicovideo.jp/" class="top">niconico</a><ul>
+			<li><a href="https://www.nicovideo.jp/video_top/" class="top">動画</a> &gt; <a href="https://www.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="https://seiga.nicovideo.jp/" class="top">静画</a> &gt; <a href="https://seiga.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="http://live.nicovideo.jp/" class="top">生放送</a> &gt; <a href="http://live.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="http://jk.nicovideo.jp/" class="top">実況</a></li>
+			<li><a href="https://ch.nicovideo.jp/" class="top">チャンネル</a> &gt; <a href="https://ch.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+			<li><a href="https://com.nicovideo.jp/" class="top">コミュニティ</a></li>
+			<li><a href="https://dic.nicovideo.jp/" class="top">大百科</a></li>
+			<li><a href="https://3d.nicovideo.jp/" class="top">立体</a> &gt; <a href="https://3d.nicovideo.jp/rankings/original/daily" class="ranking">ランキング</a></li>
+			<li><a href="https://commons.nicovideo.jp/" class="top">コモンズ</a> &gt; <a href="https://commons.nicovideo.jp/ranking/" class="ranking">ランキング</a></li>
+			<li><a href="https://ichiba.nicovideo.jp/" class="top">市場</a> &gt; <a href="https://ichiba.nicovideo.jp/ranking/" class="ranking">ランキング</a></li>
+			<li><a href="http://app.nicovideo.jp/" class="top">アプリ</a></li>
+			<li><a href="https://news.nicovideo.jp/" class="top">ニュース</a> &gt; <a href="https://news.nicovideo.jp/ranking" class="ranking">ランキング</a></li>
+		</ul></li>
+	</ul>
+</div>
+<div id="nicovideo-shortcut">
+	<h2>ニコニコ動画ショートカット</h2>
+	<ul class="nicovideo-link">
+		<li><a href="https://www.nicovideo.jp/my" rel="nofollow">マイページ</a></li>
+		<li><a href="https://www.upload.nicovideo.jp/upload" rel="nofollow">動画を投稿</a></li>
+		<li><a href="https://www.nicovideo.jp/my/history" rel="nofollow">視聴履歴</a></li>
+		<li><a href="https://www.nicovideo.jp/newarrival">新着動画</a></li>
+		<li><a href="https://www.nicovideo.jp/ranking">ランキング</a></li>
+	</ul>
+</div>
+	<address id="copyright">Copyright &copy; 2007-2020 <a href="http://www.nicochart.jp/">nicochart</a> ( <a href="https://twitter.com/nicochart_jp" class="other-site twitter">@nicochart_jp</a> ) all rights reserved.</address>
+</div>
+</div>
+<div id="inner-link"></div>
+<div id="pageinfo">
+<ul>
+	<li id="cpu">static</li>
+	<li id="lastupdate"></li>
+	<li id="clock"></li>
+	<li id="signal"><img src="http://res.nicochart.jp/img/signal_0.gif" alt="" /></li>
+	<li id="economy"><img src="http://res.nicochart.jp/img/economy_0.gif" alt="" /></li>
+	<li id="upload"><a href="https://www.upload.nicovideo.jp/upload" class="nicovideo-link"><img src="http://res.nicochart.jp/img/upload_0.gif" alt="" /></a></li>
+	<li id="migiue"><a href="http://res.nicochart.jp/webclap" title="[ WEB拍手 ]  右上のコメントはこちらから投稿できます。"><img src="http://res.nicochart.jp/img/migiue.gif" alt="WEB拍手" /></a></li>
+</ul>
+</div>
+<script type="text/javascript">
+bootApp();
+loadAsyncData( '#total-table', function( i, cb ){ i.load( 'total/all', cb ) } );
+</script>
+</body>
+</html>
