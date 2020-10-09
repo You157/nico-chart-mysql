@@ -18,15 +18,25 @@
 	</tr>
 	</thead>
 	<tbody>
-	<tr id="d2020100705" class="wo me">
+	<tr id="d2020100804" class="wo me">
+		<td class="date" id="d20201008"><a href="total/202010#d08">2020年10月08日(<span class="thu">木</span>)</a></td>
+		<td class="hour lag" title="2020-10-08 04:00:01">4時</td>
+		<td class="video-total-diff">2,264</td>
+		<td class="view-total-diff">33,960,029</td>
+		<td class="res-total-diff">416,557</td>
+		<td class="video-total">17,985,338</td>
+		<td class="view-total">113,378,436,577</td>
+		<td class="res-total">5,882,919,899</td>
+	</tr>
+	<tr id="d2020100706" class="wo me">
 		<td class="date" id="d20201007"><a href="total/202010#d07">2020年10月07日(<span class="wed">水</span>)</a></td>
-		<td class="hour lag" title="2020-10-07 05:00:00">5時</td>
-		<td class="video-total-diff">2,487</td>
-		<td class="view-total-diff">17,744,834</td>
-		<td class="res-total-diff">408,585</td>
-		<td class="video-total">17,983,006</td>
-		<td class="view-total">113,343,654,341</td>
-		<td class="res-total">5,882,486,478</td>
+		<td class="hour" title="2020-10-07 06:00:00">6時</td>
+		<td class="video-total-diff">2,555</td>
+		<td class="view-total-diff">18,567,041</td>
+		<td class="res-total-diff">425,449</td>
+		<td class="video-total">17,983,074</td>
+		<td class="view-total">113,344,476,548</td>
+		<td class="res-total">5,882,503,342</td>
 	</tr>
 	<tr id="d2020100606" class="wo me">
 		<td class="date" id="d20201006"><a href="total/202010#d06">2020年10月06日(<span class="tue">火</span>)</a></td>
