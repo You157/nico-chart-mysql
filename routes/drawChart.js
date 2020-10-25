@@ -1,92 +1,103 @@
 const express = require('express');
 const router = express.Router();
-const sequelize = require('sequelize');
-const diffModel = require('../models/dayInfoDiff');
 const moment = require('moment');
-const Op = require('sequelize').Op;
 const async = require('async');
+const connection = require('../models/connection').connection;
 
 router.get('/', function (req, res, next) {
-  var p = req.query.p;
-  var y = moment({ y: req.query.y }).format('YYYY');
-  var m = moment({ M: (req.query.m - 1)}).format('MM');
-  let result = { 'labels': [], 'videos': [], 'views': [], 'comments': [] };
-  switch (p) {
+  let params = req.query.p;
+  let year = moment({ y: req.query.y }).format('YYYY');
+  let month = moment({ M: (req.query.m - 1) }).format('MM');
+  let resultJson = { 'labels': [], 'videos': [], 'views': [], 'comments': [] };
+  let videosCount;
+  let viewsCount;
+  let commentsCount;
+  switch (params) {
     case '0':
-      diffModel.findAll({
-        attributes: [
-          'group_year',
-          [sequelize.fn('sum', sequelize.col('diff_videos')), 'total_videos'],
-          [sequelize.fn('sum', sequelize.col('diff_views')), 'total_views'],
-          [sequelize.fn('sum', sequelize.col('diff_comments')), 'total_comments'],
-        ],
-        group: ['group_year'],
-        order: [['group_year', 'ASC']]
-      }).then(datas => {
-        console.log(`--- ${datas}`);
-        async.each(datas, (data, callback) => {
-          result.labels.push(data.dataValues.group_year);
-          result.videos.push(data.dataValues.total_videos);
-          result.views.push(data.dataValues.total_views);
-          result.comments.push(data.dataValues.total_comments);
+      var sql = `(select * from total where date like '%-12-31') 
+        union (select * from total order by date desc limit 1)`;
+      connection.query(sql, function (err, result) {
+        if (err) throw err;
+        let before = {
+          total_videos: 0, total_views: 0, total_comments: 0
+        };
+        async.each(result, (data, callback) => {
+          videosCount = data.total_videos - before.total_videos;
+          viewsCount = data.total_views - before.total_views;
+          commentsCount = data.total_comments - before.total_comments;
+          before = data;
+          resultJson.labels.push(data.date.slice(0, 4));
+          resultJson.videos.push(videosCount);
+          resultJson.views.push(viewsCount);
+          resultJson.comments.push(commentsCount);
           callback();
         }, () => {
-          res.json(result);
+          res.json(resultJson);
         });
       });
       break;
     case '1':
-      diffModel.findAll({
-        where: { group_year: y },
-        attributes: [
-          'group_year',
-          'group_month',
-          [sequelize.fn('sum', sequelize.col('diff_videos')), 'total_videos'],
-          [sequelize.fn('sum', sequelize.col('diff_views')), 'total_views'],
-          [sequelize.fn('sum', sequelize.col('diff_comments')), 'total_comments'],
-        ],
-        group: ['group_year', 'group_month'],
-        order: [['group_month', 'ASC']]
-      }).then(datas => {
-        async.each(datas, (data, callback) => {
-          result.labels.push(`${data.dataValues.group_year}-${data.dataValues.group_month}`);
-          result.videos.push(data.dataValues.total_videos);
-          result.views.push(data.dataValues.total_views);
-          result.comments.push(data.dataValues.total_comments);
+      var sql = `
+        select * from total where date in (
+          '${year - 1}-12-31', '${year}-01-31', last_day('${year}-02-01'), '${year}-03-31', '${year}-04-30', 
+          '${year}-05-31', '${year}-06-30', '${year}-07-31', '${year}-08-31', 
+          '${year}-09-30', '${year}-10-31', '${year}-11-30', '${year}-12-31'        
+        ) order by date asc`;
+      connection.query(sql, function (err, result) {
+        if (err) throw err;
+        let i = 0;
+        let before;
+        async.each(result, (data, callback) => {
+          if (i != 0) {
+            videosCount = data.total_videos - before.total_videos;
+            viewsCount = data.total_views - before.total_views;
+            commentsCount = data.total_comments - before.total_comments;
+            resultJson.labels.push(data.date.slice(0, 7));
+            resultJson.videos.push(videosCount);
+            resultJson.views.push(viewsCount);
+            resultJson.comments.push(commentsCount);
+          }
+          i++;
+          before = data;
           callback();
         }, () => {
-          res.json(result);
+          res.json(resultJson);
         });
       });
       break;
     case '2':
-      diffModel.findAll({
-        where: { group_year: y, group_month: m },
-        order: [['date', 'ASC']]
-      }).then(datas => {
-        async.each(datas, (data, callback) => {
-          result.labels.push(data.dataValues.date);
-          result.videos.push(data.dataValues.diff_videos);
-          result.views.push(data.dataValues.diff_views);
-          result.comments.push(data.dataValues.diff_comments);
+      var sql = `
+        select * from total 
+          where date like '${year}-${month}%'
+        union select * from total
+          where date = date_sub('${year}-${month}-01', interval 1 day)
+        order by date asc
+        `;
+      connection.query(sql, function (err, result) {
+        if (err) throw err;
+        let i = 0;
+        let before;
+        async.each(result, (data, callback) => {
+          if (i != 0) {
+            videosCount = data.total_videos - before.total_videos;
+            viewsCount = data.total_views - before.total_views;
+            commentsCount = data.total_comments - before.total_comments;
+            resultJson.labels.push(data.date);
+            resultJson.videos.push(videosCount);
+            resultJson.views.push(viewsCount);
+            resultJson.comments.push(commentsCount);
+          }
+          i++;
+          before = data;
           callback();
         }, () => {
-          res.json(result);
+          res.json(resultJson);
         });
       });
       break;
     case '3':
       break;
   }
-  /*
-  var datas = {
-    'labels': ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
-    'videos': [100000, 110000, 120000, 130000, 140000, 150000, 160000],
-    'views': [200000, 210000, 220000, 230000, 240000, 250000, 260000],
-    'comments': [5000, 6000, 7000, 8000, 9000, 10000, 11000]
-  };
-  res.json(datas);
-  */
 });
 
 module.exports = router;

@@ -1,1 +1,1 @@
-# nico-chart
+# nico-chart-mysql

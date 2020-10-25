@@ -4,7 +4,7 @@ const logger = require('../logger');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  logger.info('requested now');
+  logger.Default.info('リクエストがありました');
   res.render('index');
 });
 
