@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const moment = require('moment');
 const async = require('async');
-const connection = require('../models/connection').connection;
+// herokuでとりあえず動作するようにmySQLに接続する処理を排除
+// const connection = require('../models/connection').connection;
 
 router.get('/', function (req, res, next) {
   let params = req.query.p;
@@ -16,6 +17,7 @@ router.get('/', function (req, res, next) {
     case '0':
       var sql = `(select * from total where date like '%-12-31') 
         union (select * from total order by date desc limit 1)`;
+      /*  
       connection.query(sql, function (err, result) {
         if (err) throw err;
         let before = {
@@ -35,6 +37,7 @@ router.get('/', function (req, res, next) {
           res.json(resultJson);
         });
       });
+      */
       break;
     case '1':
       var sql = `
