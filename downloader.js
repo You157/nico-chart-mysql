@@ -28,5 +28,4 @@ const downloader = () => {
       });
   });
 }
-
 module.exports = downloader;

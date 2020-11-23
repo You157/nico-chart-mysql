@@ -1,4 +1,4 @@
 node_modules/
-logs/
-all.zip
+*.log
 all/
+all.zip

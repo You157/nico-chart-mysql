@@ -46,13 +46,13 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 /** 定期実行するプログラムです */
+/*
 const cron = require('cron').CronJob;
 const downloader = require('./downloader');
 const updateTotalModel = require('./models/updateTotalModel');
 const logger_ = require('./logger');
 const cronJob = new cron({
-  // cronTime: '00 00 5 * * *', // 5時に実行
-  cronTime: '00 48 19 * * *',
+  cronTime: '00 00 5 * * *', // 5時に実行
   start: true,
   onTick: () => {
     downloader().then(() => {
@@ -62,3 +62,4 @@ const cronJob = new cron({
     });
   }
 });
+*/
