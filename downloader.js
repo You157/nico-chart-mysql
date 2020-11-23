@@ -8,12 +8,16 @@ const url = 'http://www.nicochart.jp/total/all.zip';
 const logger = require('./logger');
 
 const downloader = () => {
+  console.log('- test 1');
   return new Promise(resolve => {
+    console.log('-- test 2');
     rp({ method: 'GET', url: url, encoding: null },
       (err, res, body) => {
         // zipファイルを保存する
         fs.writeFileSync('./downloads/all.zip', body, 'binary');
+        console.log('--- test 3');
       }).then(() => {
+        console.log('---- test 4');
         console.log('zipファイルダウンロード完了');
         logger.Default.info('zipファイルダウンロード完了');
         // zipファイルを解凍する
@@ -28,6 +32,5 @@ const downloader = () => {
       });
   });
 }
-console.log('----- test');
 downloader();
 module.exports = downloader;
