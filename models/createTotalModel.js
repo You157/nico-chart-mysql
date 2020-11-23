@@ -1,9 +1,7 @@
 'use strict';
 const connection = require('./connection').connection;
 
-// const createTotalModel = ()=>{
-// CUIから呼び出し可能
-module.exports.createTotalModel = ()=>{
+const createTotalModel = ()=>{
   var sql = `CREATE TABLE total (
     id INT unsigned AUTO_INCREMENT, 
     date TEXT, time SMALLINT, 
@@ -18,4 +16,5 @@ module.exports.createTotalModel = ()=>{
   });
 }
 
+createTotalModel();
 // module.exports = createTotalModel;
