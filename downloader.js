@@ -28,5 +28,6 @@ const downloader = () => {
       });
   });
 }
+console.log('----- test');
 downloader();
 module.exports = downloader;
