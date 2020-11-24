@@ -27,7 +27,8 @@ const downloader = () => {
         logger.Default.info('解凍完了');
         resolve();
       }).catch((err) => {
-        console.log(err);
+        // console.log(err);
+        console.log('----- ERROR !!!!!');
         logger.Error.error(err);
       });
   });
