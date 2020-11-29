@@ -1,4 +1,4 @@
 node_modules/
 *.log
 *
-!/downloads/all/total/all.tsv
+!./downloads/all/total/all.tsv
