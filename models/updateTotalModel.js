@@ -56,5 +56,5 @@ function checkDataInTotalModel(data) {
     });
   });
 }
-
+updateTotalModel();
 module.exports = updateTotalModel;
