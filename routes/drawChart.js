@@ -17,7 +17,6 @@ router.get('/', function (req, res, next) {
     case '0':
       var sql = `(select * from total where date like '%-12-31') 
         union (select * from total order by date desc limit 1)`;
-      /*  
       connection.query(sql, function (err, result) {
         if (err) throw err;
         let before = {
@@ -37,7 +36,6 @@ router.get('/', function (req, res, next) {
           res.json(resultJson);
         });
       });
-      */
       break;
     case '1':
       var sql = `
