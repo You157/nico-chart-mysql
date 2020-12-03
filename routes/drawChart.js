@@ -3,7 +3,7 @@ const router = express.Router();
 const moment = require('moment');
 const async = require('async');
 // herokuでとりあえず動作するようにmySQLに接続する処理を排除
-// const connection = require('../models/connection').connection;
+const connection = require('../models/connection').connection;
 
 router.get('/', function (req, res, next) {
   let params = req.query.p;
