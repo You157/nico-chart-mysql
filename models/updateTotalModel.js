@@ -4,7 +4,8 @@
 const fs = require('fs');
 const csvParse = require('csv-parse');
 const { type } = require('os');
-const path = './downloads/all/total/all.tsv';
+// const path = './downloads/all/total/all.tsv';
+const path = './downloads/all/total/2007.tsv';
 const logger = require('../logger');
 const connection = require('./connection').connection;
 
