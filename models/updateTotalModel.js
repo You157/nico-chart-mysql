@@ -5,11 +5,11 @@ const fs = require('fs');
 const csvParse = require('csv-parse');
 const { type } = require('os');
 // const path = './downloads/all/total/all.tsv';
-const path = './downloads/all/total/2007.tsv';
+// const path = './downloads/all/total/2007.tsv';
 const logger = require('../logger');
 const connection = require('./connection').connection;
 
-const updateTotalModel = () => {
+const updateTotalModel = (path) => {
   return new Promise(resolve => {
     var rs = fs.createReadStream(path, 'utf-8');
     var parser = csvParse({
@@ -57,5 +57,6 @@ function checkDataInTotalModel(data) {
     });
   });
 }
-updateTotalModel();
+
+updateTotalModel(process.argv[2]);
 module.exports = updateTotalModel;
