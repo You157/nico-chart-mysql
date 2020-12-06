@@ -16,7 +16,8 @@ block content
   button(type="button" id="btn") 表示
 
   script.
-    let url = `/drawchart?p=0&y=&m=&d=`;
+    // let url = `/drawchart?p=0&y=&m=&d=`;
+    let url = `/drawchart?p=0&y=&m=`;
     let labels; let videos; let views; let comments;
     let chart;
     $.getJSON(url, (res) => {
