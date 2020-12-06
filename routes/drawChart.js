@@ -31,8 +31,6 @@ router.get('/', function (req, res, next) {
           resultJson.videos.push(videosCount);
           resultJson.views.push(viewsCount);
           resultJson.comments.push(commentsCount);
-          //
-          console.log(videosCount);
           callback();
         }, () => {
           res.json(resultJson);

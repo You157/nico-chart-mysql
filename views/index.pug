@@ -70,41 +70,42 @@ block content
     let p = $("#params").val();
     let y = $("#year");
     let m = $("#month");
-    let d = $("#day");
+    // let d = $("#day");
     // 入力ボックスの設定
     $("#params").on("change",()=>{
       p = $("#params").val();
       y = $("#year");
       m = $("#month");
-      d = $("#day");
+      // d = $("#day");
       switch(p){
         case "0":
           y.prop("disabled", true);
           m.prop("disabled", true);
-          d.prop("disabled", true);
-          y.val(""); m.val(""); d.val("");
+          // d.prop("disabled", true);
+          y.val(""); m.val(""); // d.val("");
           break;
         case "1":
           y.prop("disabled", false);
           m.prop("disabled", true);
-          d.prop("disabled", true);
-          m.val(""); d.val("");
+          // d.prop("disabled", true);
+          m.val(""); // d.val("");
           break;
         case "2":
           y.prop("disabled", false);
           m.prop("disabled", false);
-          d.prop("disabled", true);
-          d.val("");
+          // d.prop("disabled", true);
+          // d.val("");
           break;
         case "3":
           y.prop("disabled", false);
           m.prop("disabled", false);
-          d.prop("disabled", false);
+          // d.prop("disabled", false);
           break;
       }
     });
     $("#btn").click(()=>{
-      url = `/drawchart?p=${p}&y=${y.val()}&m=${m.val()}&d=${d.val()}`;
+      // url = `/drawchart?p=${p}&y=${y.val()}&m=${m.val()}&d=${d.val()}`;
+      url = `/drawchart?p=${p}&y=${y.val()}&m=${m.val()}`;
       $.getJSON(url, (res) => {
         labels = res.labels;
         videos = res.videos;
