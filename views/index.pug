@@ -3,6 +3,9 @@ extends layout
 block content
   h1= title
   p ニコチャートへようこそ！
+  p 全期間：各年に投稿された再生数・コメント数・動画数をグラフ化します。
+  p 年間：指定した年における、各月に投稿された再生数・コメント数・動画数をグラフ化します。
+  p 月間：指定した年・月における、各年に投稿された再生数、コメント数、動画数をグラフ化します。
   canvas(id="myChart")
   div
     select(name="params", id="params" value="0")
